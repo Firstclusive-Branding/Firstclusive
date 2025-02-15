@@ -1,0 +1,140 @@
+.footer {
+  text-align: center;
+  /* position: absolute;
+  width: 100vw;
+  bottom: 0; */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footerLogo img {
+  width: 140px;
+}
+.footerLogoMobile {
+  display: none;
+}
+
+.footer-contact,
+.footer-social {
+  max-width: 400px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  color: #afe507;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #afe507;
+  text-decoration: underline;
+}
+.footer-contact-icon {
+  color: #afe507;
+  font-size: 18px;
+  margin: 0 5px;
+}
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social .social-icons a {
+  color: #afe507;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #afe507;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .footerLogoDesktop img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0;
+  }
+
+  .footerLogoDesktop img {
+    width: 100px;
+  }
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 22px;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+  }
+  .footer-social .social-icons a {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer {
+    padding: 15px 0;
+    text-align: left;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: start;
+    padding: 0 1rem;
+  }
+  .footerLogoDesktop {
+    display: none;
+  }
+
+  .footerLogoMobile {
+    display: block;
+  }
+
+  .footerLogoMobile img {
+    width: 70%;
+  }
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 20px;
+  }
+
+  .footer-contact p {
+    font-size: 10px;
+  }
+
+  .footer-social .social-icons a {
+    font-size: 24px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

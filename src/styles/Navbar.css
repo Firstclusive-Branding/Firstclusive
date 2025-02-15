@@ -1,0 +1,237 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  z-index: 9999;
+}
+
+.logoDesktop img {
+  height: 70px;
+}
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.nav-links li a {
+  color: #afe507;
+  text-decoration: none;
+}
+
+.nav-links li span {
+  color: #afe507;
+  cursor: pointer;
+}
+.nav-links li a:hover,
+.nav-links li span:hover {
+  color: #fff;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: #0e0e0e;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown li {
+  list-style: none;
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-dropdown li a:hover {
+  background: #afe507;
+  color: black;
+}
+.getintouch span i {
+  margin: 0 10px;
+  background-color: #afe507;
+  border-radius: 50%;
+  transition: all 0.8s;
+  padding: 10px;
+}
+.getintouch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #afe507;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 0 #afe507;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.getintouch:active {
+  transform: scale(0.9);
+}
+.getintouch:hover {
+  border: 2px solid #fff;
+  color: #0e0e0e;
+}
+.getintouch:hover i {
+  color: #fff;
+  background-color: #0e0e0e;
+}
+.bubbleEffect {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #afe507;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: -5;
+  bottom: -100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.getintouch:hover .bubbleEffect {
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, 50%);
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  margin: 0 4rem;
+  color: #afe507;
+  cursor: pointer;
+}
+.logoMobile {
+  display: none;
+  padding: 10px;
+}
+.logoMobile img {
+  height: 50px;
+}
+.bi-chevron-right {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logoDesktop {
+    display: none;
+  }
+  .logoMobile {
+    display: inline;
+  }
+}
+@media (max-width: 1080px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .getintouch {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  .nav-links.active {
+    top: 70%;
+    transform: translateY(0);
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links li {
+    padding: 0 1rem;
+  }
+  .bi-chevron-down {
+    display: none;
+  }
+  .bi-chevron-right {
+    display: inline;
+  }
+  .nav-item .nav-dropdown {
+    display: none;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-item.open .nav-dropdown {
+    display: block;
+  }
+
+  .nav-item .nav-dropdown li a {
+    color: #afe507;
+    padding: 8px 15px;
+  }
+
+  .nav-item span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bi-chevron-right {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-item.open .bi-chevron-right {
+    transform: rotate(90deg);
+  }
+}
