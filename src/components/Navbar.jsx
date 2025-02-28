@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Navbar.css";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const navRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
@@ -24,18 +27,31 @@ const Navbar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      sessionStorage.setItem("scrollToTop", "true");
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+  };
   return (
     <nav className="navbar" ref={navRef}>
       <div className="logo logoDesktop">
-        <a href="">
+        <Link to="/" onClick={handleHomeClick}>
           <img src="FBLogo3A.png" alt="Firstclusive Logo" />
-        </a>
+        </Link>
       </div>
       <div className="logo logoMobile">
-        <a href="">
-          <img src="FBLogo3.png" alt="Firstclusive Logo" />
-        </a>
+        <Link to="/" onClick={handleHomeClick}>
+          <img src="FBLogo3.png" alt="Firstclusive Logo" />{" "}
+        </Link>
       </div>
       <div
         className="hamburger"
@@ -49,7 +65,9 @@ const Navbar = () => {
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li className="nav-item">
           <span>
-            <a href="#home">Home</a>
+            <Link to="/" onClick={handleHomeClick}>
+              Home
+            </Link>
           </span>
         </li>
         <li
@@ -65,19 +83,29 @@ const Navbar = () => {
           </span>
           <ul className="nav-dropdown">
             <li>
-              <a href="#about-us">About Us</a>
+              <Link to="/about-us" onClick={closeMenu}>
+                About Us
+              </Link>
             </li>
             <li>
-              <a href="#team">Our Team</a>
+              <Link to="/our-team" onClick={closeMenu}>
+                Our Team
+              </Link>
             </li>
             <li>
-              <a href="#portfolio">Our Portfolio</a>
+              <Link to="/portfolio" onClick={closeMenu}>
+                Our Portfolio
+              </Link>
             </li>
             <li>
-              <a href="#mission">Mission & Vision</a>
+              <Link to="/mission" onClick={closeMenu}>
+                Mission & Vision
+              </Link>
             </li>
             <li>
-              <a href="#history">Company History</a>
+              <Link to="/company-history" onClick={closeMenu}>
+                Company History
+              </Link>
             </li>
           </ul>
         </li>
@@ -89,26 +117,40 @@ const Navbar = () => {
           }}
         >
           <span>
-            Services <i className="bi bi-chevron-down"></i>
-            <i className="bi bi-chevron-right"></i>
+            <Link to="/our-services" onClick={closeMenu}>
+              Services
+              {/* <i className="bi bi-chevron-down"></i> */}
+            </Link>
+
+            {/* <i className="bi bi-chevron-right"></i> */}
           </span>
-          <ul className="nav-dropdown">
+          {/* <ul className="nav-dropdown">
             <li>
-              <a href="#logo-branding">Logo & Branding</a>
+              <Link to="/logo-branding" onClick={closeMenu}>
+                Logo & Branding
+              </Link>
             </li>
             <li>
-              <a href="#uiux-design">UI/UX Design</a>
+              <Link to="/uiux-design" onClick={closeMenu}>
+                UI/UX Design
+              </Link>
             </li>
             <li>
-              <a href="#web-development">Web Development</a>
+              <Link to="/web-development" onClick={closeMenu}>
+                Web Development
+              </Link>
             </li>
             <li>
-              <a href="#digital-marketing">Digital Marketing</a>
+              <Link to="/digital-marketing" onClick={closeMenu}>
+                Digital Marketing
+              </Link>
             </li>
             <li>
-              <a href="#printing">Printing</a>
+              <Link to="/printing" onClick={closeMenu}>
+                Printing
+              </Link>
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li
           className={`nav-item dropdown ${openDropdown === 3 ? "open" : ""}`}
@@ -123,22 +165,30 @@ const Navbar = () => {
           </span>
           <ul className="nav-dropdown">
             <li>
-              <a href="#support">Customer Support</a>
+              <Link to="/contact-us" onClick={closeMenu}>
+                Contact Us
+              </Link>
             </li>
             <li>
-              <a href="#location">Our Location</a>
+              <Link to="/our-location" onClick={closeMenu}>
+                Our Location
+              </Link>
             </li>
             <li>
-              <a href="#careers">Careers</a>
+              <Link to="/careers" onClick={closeMenu}>
+                Careers
+              </Link>
             </li>
           </ul>
         </li>
       </ul>
       <div className="getintouch">
-        <span>
-          GET IN TOUCH <i className="bi bi-telephone-outbound-fill"></i>
-        </span>
-        <span className="bubbleEffect"></span>
+        <Link to="/contact-us" className="getintouchLink">
+          <span>
+            GET IN TOUCH <i className="bi bi-telephone-outbound-fill"></i>
+          </span>
+          <span className="bubbleEffect"></span>
+        </Link>
       </div>
     </nav>
   );

@@ -3,3 +3,6 @@
 * {
   font-family: "BT Beau Sans", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

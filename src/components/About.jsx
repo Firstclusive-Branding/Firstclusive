@@ -21,10 +21,10 @@ const About = () => {
             let progress = Math.min(elapsedTime / duration, 1);
 
             setCounters([
-              Math.floor(Math.random() * 10),
+              Math.floor(progress * targetCounts[0]),
               Math.floor(progress * targetCounts[1]),
               Math.floor(progress * targetCounts[2]),
-              Math.floor(Math.random() * 10),
+              Math.floor(progress * targetCounts[3]),
             ]);
 
             if (progress === 1) {
@@ -47,7 +47,7 @@ const About = () => {
         <h2 className="section-title">About Us</h2>
 
         <div className="about-content">
-          <div className="about-text">
+          <article className="about-text">
             <p>
               Firstclusive Branding is a leading creative and digital agency
               based in Hyderabad, India. Since our establishment in 2014, we
@@ -59,7 +59,7 @@ const About = () => {
               crafting powerful brand identities, high-performance websites, and
               marketing strategies that drive real results.
             </p>
-          </div>
+          </article>
           <div className="about-image">
             <img
               src="https://picsum.photos/id/239/400/250"

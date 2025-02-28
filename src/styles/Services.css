@@ -3,13 +3,13 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: #0e0e0e;
 }
 
 .service-card {
   position: relative;
-  width: 200px;
-  height: 500px;
+  text-decoration: none;
+  width: 250px;
+  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;

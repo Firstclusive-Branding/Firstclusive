@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 import {
   FaFacebookF,
@@ -16,14 +17,14 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footerLogoContainer">
           <div className="footerLogo footerLogoMobile">
-            <a href="">
+            <Link to="/">
               <img src="FBLogo3A.png" alt="Firstclusive Logo" />
-            </a>
+            </Link>
           </div>
           <div className="footerLogo footerLogoDesktop">
-            <a href="">
+            <Link to="/">
               <img src="FBLogo3.png" alt="Firstclusive Logo" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -31,7 +32,6 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             <FaPhoneAlt className="footer-contact-icon" />
-            <a href="tel:+914031732040">+91-4031732040</a> |
             <a href="tel:+919885925529"> +91-9885925529</a>
           </p>
           <p>
@@ -45,8 +45,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Unit No. 506 & 508, 5th Floor, Mawin Gold Plaza, Mehdipatnam,
-              Hyderabad, Telangana - 500028
+              Mehdipatnam, Hyderabad
             </a>
           </p>
         </div>

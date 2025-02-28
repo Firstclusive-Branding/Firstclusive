@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <header className="hero">
       <div className="hero-content">
         <h1 className="hero-title">Transforming Ideas into Reality</h1>
         <p className="hero-subtitle">
@@ -16,13 +17,13 @@ const Hero = () => {
           hospitality.
         </p>
       </div>
-      <div className="heroButton">
+      <Link to="/our-services" className="hero-button">
         <span>
-          GET STARTED <i className="bi bi-telephone-outbound-fill"></i>
+          EXPLORE SERVICES <i className="bi bi-telephone-outbound-fill"></i>
         </span>
-        <span className="heroBubbleEffect"></span>
-      </div>
-    </section>
+        <span className="hero-bubble-effect"></span>
+      </Link>
+    </header>
   );
 };
 

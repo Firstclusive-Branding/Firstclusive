@@ -1,35 +1,36 @@
 .branding-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: relative;
-  font-weight: bold;
+  background: url("../assets/hero-bg.jpg") no-repeat center center/cover;
   z-index: 2;
 }
 
 .branding-text {
-  font-size: 8rem;
-  margin: -30px auto;
+  position: absolute;
+  font-size: 8vw;
+  margin: -10px auto;
   font-weight: bold;
   white-space: nowrap;
   position: relative;
   letter-spacing: 18px;
   color: transparent;
   will-change: transform, opacity;
-  opacity: 1;
+  z-index: 2;
 }
 
 .firstclusive {
   background: linear-gradient(to right, #afe507, #fff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: slideInLeft 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .branding {
   -webkit-text-stroke: 2px #fff;
-  animation: slideInRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .ufo-container {
@@ -44,34 +45,6 @@
   height: 100%;
   animation: UFOAnimation 2s ease-in-out, floatUFO 3s ease-in-out infinite;
   animation-delay: 0s, 2s;
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-30vw);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(2vw);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(30vw);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(-2vw);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 @keyframes UFOAnimation {
@@ -109,6 +82,9 @@
 }
 
 @media (max-width: 768px) {
+  .branding-container {
+    height: 60vh;
+  }
   .branding-text {
     font-size: 10vw;
     letter-spacing: 8px;
@@ -116,6 +92,9 @@
 }
 
 @media (max-width: 480px) {
+  .branding-container {
+    height: 40vh;
+  }
   .branding-text {
     font-size: 10vw;
     letter-spacing: 5px;

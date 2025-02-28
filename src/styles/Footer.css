@@ -32,6 +32,7 @@
 .footer-contact p {
   margin: 5px 0;
   font-size: 14px;
+  text-align: left;
 }
 .footer-contact a {
   color: #fff;
@@ -47,7 +48,7 @@
 .footer-contact-icon {
   color: #afe507;
   font-size: 18px;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .footer-social .social-icons {
   display: flex;
@@ -56,13 +57,13 @@
 }
 
 .footer-social .social-icons a {
-  color: #afe507;
+  color: #fff;
   font-size: 30px;
   transition: 0.3s;
 }
 
 .footer-social .social-icons a:hover {
-  color: #ffffff;
+  color: #afe507;
 }
 
 .footer-bottom {

@@ -1,0 +1,137 @@
+.company-history-container {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.company-history-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.company-history-title {
+  color: #afe507;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.company-history-subtitle {
+  font-size: 1.3em;
+  color: #ffffff;
+  max-width: 600px;
+  margin: auto;
+}
+
+.company-history-timeline {
+  border-left: 3px solid #afe507;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+
+.company-history-event {
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.company-history-year {
+  color: #afe507;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.company-history-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.company-history-event::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #afe507;
+  border-radius: 50%;
+}
+
+.company-history-image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(175, 229, 7, 0.3);
+}
+
+.company-history-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-out;
+  border-radius: 10px;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.company-history-image:hover {
+  transform: scale(1.1);
+}
+
+.company-history-values,
+.company-history-future {
+  margin-bottom: 50px;
+}
+
+.company-history-values-title,
+.company-history-future-title {
+  color: #afe507;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.company-history-values-description,
+.company-history-future-description {
+  font-size: 1.2em;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: auto 0;
+}
+
+@media screen and (max-width: 425px) {
+  .company-history-title {
+    font-size: 1.8rem;
+  }
+
+  .company-history-subtitle {
+    font-size: 1rem;
+  }
+
+  .company-history-year {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .company-history-description {
+    font-size: 1rem;
+  }
+
+  .company-history-values-title,
+  .company-history-future-title {
+    font-size: 1.5rem;
+  }
+
+  .company-history-values-description,
+  .company-history-future-description {
+    font-size: 1rem;
+  }
+
+  .company-history-image {
+    width: 100%;
+    height: auto;
+  }
+}

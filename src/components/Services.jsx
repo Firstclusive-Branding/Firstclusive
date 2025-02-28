@@ -4,40 +4,50 @@ import webDevelopmentImage from "../assets/Services/Web Development.webp";
 import digitalMarketingImage from "../assets/Services/Digital Marketing.webp";
 import printingImage from "../assets/Services/Printing.webp";
 import "../styles/Services.css";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     id: "01",
     title: "Logo & Branding",
+    class: "logo-branding",
     image: logoAndBrandingImage,
   },
   {
     id: "02",
     title: "UI/UX Design",
+    class: "ui-ux-design",
     image: uiUxDesignImage,
   },
   {
     id: "03",
     title: "Web Development",
+    class: "web-development",
     image: webDevelopmentImage,
   },
   {
     id: "04",
     title: "Digital Marketing",
+    class: "digital-marketing",
     image: digitalMarketingImage,
   },
   {
     id: "05",
     title: "Printing",
+    class: "printing",
     image: printingImage,
   },
 ];
 
-export default function Services() {
+const Services = () => {
   return (
     <div className="services-container">
       {services.map((service) => (
-        <div key={service.id} className="service-card">
+        <Link
+          to={`/our-services#${service.class}`}
+          key={service.id}
+          className="service-card"
+        >
           <div className="service-text">
             <span className="service-id">{service.id}</span>
             <span className="service-title">{service.title}</span>
@@ -46,8 +56,10 @@ export default function Services() {
             className="service-bg"
             style={{ backgroundImage: `url(${service.image})` }}
           ></div>
-        </div>
+        </Link>
       ))}
     </div>
   );
-}
+};
+
+export default Services;

@@ -6,19 +6,19 @@ import "../styles/Gallery.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  "https://picsum.photos/id/1/450/300",
-  "https://picsum.photos/id/100/450/300",
-  "https://picsum.photos/id/14/450/300",
-  "https://picsum.photos/id/95/450/300",
-  "https://picsum.photos/id/10/450/300",
+  "https://picsum.photos/450/300?random=1",
+  "https://picsum.photos/450/300?random=2",
+  "https://picsum.photos/450/300?random=3",
+  "https://picsum.photos/450/300?random=4",
+  "https://picsum.photos/450/300?random=5",
 ];
 
 const images2 = [
-  "https://picsum.photos/id/12/450/300",
-  "https://picsum.photos/id/20/450/300",
-  "https://picsum.photos/id/24/450/300",
-  "https://picsum.photos/id/45/450/300",
-  "https://picsum.photos/id/29/450/300",
+  "https://picsum.photos/450/300?random=6",
+  "https://picsum.photos/450/300?random=7",
+  "https://picsum.photos/450/300?random=8",
+  "https://picsum.photos/450/300?random=9",
+  "https://picsum.photos/450/300?random=10",
 ];
 
 const Gallery = () => {

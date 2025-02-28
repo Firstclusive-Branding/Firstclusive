@@ -1,0 +1,150 @@
+.location-container {
+  display: flex;
+  flex-direction: column;
+  background: url("../assets/DotBg.png");
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  height: 100vh;
+  gap: 40px;
+}
+.location-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #ffffff2f;
+  max-width: 480px;
+  margin-right: 20px;
+}
+
+.location-header {
+  font-size: 2.2rem;
+  color: #afe507;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.details h3 {
+  font-size: 1.4rem;
+  color: #afe507;
+  margin: 20px 0 10px;
+}
+
+.details p,
+.details a {
+  display: block;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 8px 0;
+  line-height: 1.7;
+  text-align: justify;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.details a:hover {
+  color: #afe507;
+}
+.details p:last-child {
+  margin-bottom: 0;
+}
+
+.map-container {
+  flex: 1;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  min-width: 100%;
+  min-height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .location-container {
+    flex-direction: column;
+    padding: 120px 20px;
+    gap: 20px;
+  }
+
+  .location-section {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .map-container {
+    min-height: 400px;
+  }
+  .map-container iframe {
+    min-height: 400px;
+  }
+  .info-container {
+    padding: 20px;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .location-header {
+    font-size: 1.8rem;
+  }
+
+  .details h3 {
+    font-size: 1.2rem;
+  }
+
+  .details p,
+  .details a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .location-container {
+    gap: 15px;
+  }
+  .careers-title {
+    font-size: 2rem;
+  }
+  .careers-subtitle {
+    font-size: 1rem;
+  }
+  .location-section {
+    flex-direction: column-reverse;
+  }
+
+  .info-container {
+    padding: 10px;
+    margin-right: 0;
+    width: 95%;
+  }
+
+  .location-header {
+    font-size: 1.4rem;
+  }
+
+  .details h3 {
+    font-size: 1.1rem;
+  }
+
+  .details p,
+  .details a {
+    font-size: 0.9rem;
+  }
+
+  .map-container {
+    min-height: 250px;
+  }
+
+  .map-container iframe {
+    min-height: 250px;
+  }
+}

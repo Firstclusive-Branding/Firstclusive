@@ -9,7 +9,6 @@
   padding: 10px 20px;
   z-index: 9999;
 }
-
 .logoDesktop img {
   height: 70px;
 }
@@ -102,7 +101,11 @@
   overflow: hidden;
   z-index: 5;
 }
-
+.getintouch a {
+  color: #fff;
+  transition: color ease-out 0.5s;
+  text-decoration: none;
+}
 .getintouch:active {
   transform: scale(0.9);
 }
@@ -110,9 +113,16 @@
   border: 2px solid #fff;
   color: #0e0e0e;
 }
+.getintouch:hover a {
+  color: #0e0e0e;
+}
 .getintouch:hover i {
   color: #fff;
   background-color: #0e0e0e;
+}
+
+.getintouchLink {
+  text-decoration: none;
 }
 .bubbleEffect {
   position: absolute;
@@ -151,15 +161,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
-  .logoDesktop {
-    display: none;
-  }
-  .logoMobile {
-    display: inline;
-  }
-}
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
   .navbar {
     justify-content: space-between;
   }
@@ -233,5 +235,17 @@
 
   .nav-item.open .bi-chevron-right {
     transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .logoDesktop {
+    display: none;
+  }
+  .logoMobile {
+    display: inline;
+  }
+  .navbar {
+    padding-bottom: 0;
   }
 }

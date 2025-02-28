@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "location": "Hyderabad, India",
+    "description": "We are looking for a skilled Frontend Developer with experience in React and modern web technologies to join our dynamic team.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014. We specialise in Digital Marketing, Web Design, App Development, Branding and Printing services for businesses across various industries.",
+      "role_description": "This is a full-time on-site role. The Frontend Developer will be responsible for implementing UI components and features using modern JavaScript frameworks and collaborating with designers and backend developers to deliver high-performance applications.",
+      "qualifications": [
+        "Proficiency in HTML, CSS, JavaScript, and modern frameworks like React.js, Vue.js, or Angular.",
+        "Experience with state management libraries such as Redux or Context API.",
+        "Strong understanding of responsive design and cross-browser compatibility.",
+        "Familiarity with RESTful APIs and backend integration.",
+        "Experience with version control systems like Git.",
+        "Ability to write clean, maintainable, and efficient code."
+      ],
+      "bonus": [
+        "Knowledge of TypeScript and testing frameworks.",
+        "Experience with UI/UX principles.",
+        "Understanding of CI/CD pipelines."
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Specialist",
+    "location": "Bengaluru, India",
+    "description": "Join our marketing team to help drive innovative digital marketing strategies for our clients across various industries.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Digital Marketing Specialist will be responsible for planning and executing digital marketing campaigns, including SEO/SEM, email marketing, social media, and PPC advertising.",
+      "qualifications": [
+        "Strong experience in SEO, SEM, and social media marketing.",
+        "Proficiency in Google Analytics, Google Ads, and Facebook Ads Manager.",
+        "Ability to develop and execute content strategies.",
+        "Knowledge of marketing automation tools.",
+        "Strong analytical and problem-solving skills."
+      ],
+      "bonus": [
+        "Experience in influencer marketing.",
+        "Familiarity with A/B testing and conversion rate optimization."
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "location": "Mumbai, India",
+    "description": "Seeking a creative UI/UX Designer with a strong portfolio to help us design user-friendly and visually appealing digital experiences.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The UI/UX Designer will be responsible for creating wireframes, prototypes, and high-fidelity designs for web and mobile applications while ensuring seamless user experiences.",
+      "qualifications": [
+        "Proficiency in design tools like Figma, Adobe XD, or Sketch.",
+        "Experience in creating wireframes, mockups, and prototypes.",
+        "Strong understanding of UX research and usability testing.",
+        "Knowledge of HTML, CSS, and JavaScript is a plus.",
+        "A strong portfolio showcasing UI/UX design work."
+      ],
+      "bonus": [
+        "Experience with motion design and animations.",
+        "Familiarity with accessibility guidelines."
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Backend Developer",
+    "location": "Chennai, India",
+    "description": "Looking for an experienced Backend Developer proficient in Node.js and database management to build robust server-side applications.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Backend Developer will design, develop, and maintain scalable and secure server-side applications, ensuring smooth API integrations and efficient data storage.",
+      "qualifications": [
+        "Proficiency in backend languages like Node.js, Python, or PHP.",
+        "Experience with database management (MySQL, PostgreSQL, MongoDB).",
+        "Knowledge of API development and integration (REST, GraphQL).",
+        "Understanding of security best practices and authentication.",
+        "Familiarity with cloud platforms like AWS or Firebase."
+      ],
+      "bonus": [
+        "Experience with microservices architecture.",
+        "Familiarity with DevOps tools and CI/CD pipelines."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Full Stack Developer",
+    "location": "Pune, India",
+    "description": "We are seeking a talented Full Stack Developer to build and maintain scalable web applications using modern technologies.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Full Stack Developer will be responsible for both frontend and backend development, ensuring seamless integration and performance optimization.",
+      "qualifications": [
+        "Proficiency in JavaScript, React.js, and Node.js.",
+        "Experience with databases such as MongoDB or PostgreSQL.",
+        "Strong understanding of RESTful APIs and authentication methods.",
+        "Familiarity with cloud services like AWS, Firebase, or Azure.",
+        "Ability to work in an agile development environment."
+      ],
+      "bonus": [
+        "Experience with GraphQL.",
+        "Knowledge of Docker and Kubernetes."
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Social Media Manager",
+    "location": "Delhi, India",
+    "description": "Seeking a creative Social Media Manager to grow our brand presence across multiple platforms and drive engagement.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Social Media Manager will create and execute social media campaigns, analyze engagement metrics, and collaborate with designers and content creators.",
+      "qualifications": [
+        "Proven experience in social media marketing and management.",
+        "Proficiency in scheduling tools like Hootsuite or Buffer.",
+        "Ability to create engaging content and track performance metrics.",
+        "Understanding of paid social media advertising strategies.",
+        "Excellent copywriting and communication skills."
+      ],
+      "bonus": [
+        "Experience with influencer collaborations.",
+        "Knowledge of video editing and graphic design tools."
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Content Writer",
+    "location": "Kolkata, India",
+    "description": "Looking for a creative Content Writer to develop compelling and SEO-friendly content for websites, blogs, and social media.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Content Writer will research, write, and edit engaging content across multiple platforms to enhance brand awareness and audience engagement.",
+      "qualifications": [
+        "Strong writing and editing skills with attention to detail.",
+        "Knowledge of SEO best practices and keyword research.",
+        "Ability to write for different audiences and industries.",
+        "Experience with CMS platforms like WordPress.",
+        "Excellent time management and organizational skills."
+      ],
+      "bonus": [
+        "Experience in copywriting for ads and sales pages.",
+        "Basic knowledge of graphic design and multimedia tools."
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title": "Project Manager",
+    "location": "Ahmedabad, India",
+    "description": "We are looking for an experienced Project Manager to oversee IT and digital marketing projects from inception to completion.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Project Manager will coordinate teams, manage project timelines, and ensure deliverables align with client expectations.",
+      "qualifications": [
+        "Experience in project management within IT or marketing.",
+        "Familiarity with Agile and Scrum methodologies.",
+        "Strong organizational and problem-solving skills.",
+        "Proficiency in project management tools like Jira, Trello, or Asana.",
+        "Excellent communication and stakeholder management skills."
+      ],
+      "bonus": [
+        "PMP or Scrum Master certification.",
+        "Experience managing remote teams."
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "title": "HR Manager",
+    "location": "Jaipur, India",
+    "description": "Join our team as an HR Manager and help us build a strong and motivated workforce.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The HR Manager will handle recruitment, employee engagement, policy development, and ensure compliance with labor laws.",
+      "qualifications": [
+        "Proven experience in HR and people management.",
+        "Knowledge of labor laws and HR best practices.",
+        "Experience with HR software and payroll systems.",
+        "Strong interpersonal and communication skills.",
+        "Ability to foster a positive work environment."
+      ],
+      "bonus": [
+        "Experience with employer branding.",
+        "Knowledge of employee training and development programs."
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "Sales Executive",
+    "location": "Lucknow, India",
+    "description": "Looking for a driven Sales Executive to generate leads and convert potential clients into long-term business partners.",
+    "details": {
+      "company_description": "Firstclusive Branding is a leading provider of innovative IT solutions, serving over 800 clients worldwide since 2014.",
+      "role_description": "The Sales Executive will be responsible for lead generation, client outreach, and negotiating deals to achieve revenue targets.",
+      "qualifications": [
+        "Experience in B2B or B2C sales.",
+        "Strong negotiation and persuasion skills.",
+        "Ability to build relationships with clients.",
+        "Proficiency in CRM software like HubSpot or Salesforce.",
+        "Goal-oriented with excellent time management."
+      ],
+      "bonus": [
+        "Knowledge of digital marketing sales.",
+        "Experience in SaaS or IT service sales."
+      ]
+    }
+  }
+]

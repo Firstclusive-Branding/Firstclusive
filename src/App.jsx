@@ -1,71 +1,131 @@
-import React, { lazy, Suspense } from "react";
+import React, { useEffect, useState } from "react";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "./App.css";
-import Branding from "./components/Branding";
-import ScrollReveal from "./components/ScrollReveal";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  useNavigate,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import Homepage from "./components/Homepage";
+import AboutUs from "./components/AboutUs";
+import Admin from "./components/Admin";
+import AdminLogin from "./components/AdminLogin";
+import NotFound from "./components/NotFound";
+import { auth } from "./firebase";
+import AdminDashboard from "./components/AdminDashboard";
+import ContentManagement from "./components/ContentManagement";
+import UserManagement from "./components/UserManagement";
+import Settings from "./components/Settings";
+import ContactUs from "./components/ContactUs";
+import OurServices from "./components/OurServices";
+import Careers from "./components/Careers";
+import JobApply from "./components/JobApply";
+import OurLocation from "./components/OurLocation";
+import OurTeam from "./components/OurTeam";
+import CompanyHistory from "./components/CompanyHistory";
 
-const Hero = lazy(() => import("./components/Hero"));
-const About = lazy(() => import("./components/About"));
-const Services = lazy(() => import("./components/Services"));
-const Contact = lazy(() => import("./components/Contact"));
-const Gallery = lazy(() => import("./components/Gallery"));
+const MainLayout = () => {
+  const location = useLocation();
 
-const App = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
-    <div className="app">
-      <div className="topComponents">
-        <Navbar />
-        <Branding />
-      </div>
-
-      <div className="middleComponents">
-        <Suspense fallback={<div>Loading Hero...</div>}>
-          <ScrollReveal>
-            <div className="heroApp">
-              <Hero />
-            </div>
-          </ScrollReveal>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading Gallery...</div>}>
-          <ScrollReveal delay={0.2}>
-            <div className="galleryApp">
-              <Gallery />
-            </div>
-          </ScrollReveal>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading Services...</div>}>
-          <ScrollReveal delay={0.4}>
-            <div className="servicesApp">
-              <Services />
-            </div>
-          </ScrollReveal>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading About...</div>}>
-          <ScrollReveal delay={0.6}>
-            <div className="aboutApp">
-              <About />
-            </div>
-          </ScrollReveal>
-        </Suspense>
-
-        <Suspense fallback={<div>Loading Contact...</div>}>
-          <ScrollReveal delay={0.8}>
-            <div className="contactApp">
-              <Contact />
-            </div>
-          </ScrollReveal>
-        </Suspense>
-      </div>
-
-      <div className="footerComponent">
-        <Footer />
-      </div>
+    <div>
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
   );
 };
 
-export default React.memo(App);
+const AdminLayout = () => {
+  return (
+    <Admin>
+      <Outlet />
+    </Admin>
+  );
+};
+
+const AdminRoute = ({ element }) => {
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+      } else {
+        setUser(null);
+        navigate("/admin");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [navigate]);
+
+  return user ? element : null;
+};
+const myRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <NotFound />,
+    children: [
+      { path: "/", element: <Homepage /> },
+      { path: "/about-us", element: <AboutUs /> },
+      { path: "/contact-us", element: <ContactUs /> },
+      { path: "/our-services", element: <OurServices /> },
+      { path: "/careers", element: <Careers /> },
+      { path: "/careers/apply", element: <JobApply /> },
+      { path: "/our-location", element: <OurLocation /> },
+      { path: "/our-team", element: <OurTeam /> },
+      { path: "/company-history", element: <CompanyHistory /> },
+    ],
+  },
+  {
+    path: "/admin",
+    children: [
+      { index: true, element: <AdminLogin /> },
+      {
+        path: "*",
+        element: <Navigate to="/admin" replace />,
+      },
+      {
+        element: <AdminLayout />,
+        children: [
+          { index: true, element: <Navigate to="dashboard" replace /> },
+          {
+            path: "dashboard",
+            element: <AdminRoute element={<AdminDashboard />} />,
+          },
+          {
+            path: "content-management",
+            element: <AdminRoute element={<ContentManagement />} />,
+          },
+          {
+            path: "user-management",
+            element: <AdminRoute element={<UserManagement />} />,
+          },
+          { path: "settings", element: <AdminRoute element={<Settings />} /> },
+        ],
+      },
+    ],
+  },
+]);
+
+function App() {
+  return (
+    <div className="app">
+      <RouterProvider router={myRoutes} />
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,138 @@
+/* OurTeam.css */
+
+.team-container {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: url("../assets/DotBg.png");
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  color: #afe507;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  gap: 20px;
+}
+
+.team-member {
+  display: flex;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+  background-color: #ffffff1e;
+  width: 70%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member:hover {
+  background-color: #4e4e4e;
+}
+.team-member-image-container {
+  width: 100%;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px;
+}
+.team-member-img {
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+.team-member-img:hover {
+  transform: scale(1.1);
+}
+.team-member-info {
+  text-align: left;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.team-member-name {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+  color: #afe507;
+  margin-bottom: 10px;
+}
+
+.team-member-role {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #afe507;
+  margin-bottom: 10px;
+}
+
+.team-member-description {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.team-member-message {
+  font-size: 1rem;
+  color: #fff;
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .team-member {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 425px) {
+  .team-heading {
+    font-size: 2rem;
+  }
+  .team-member-image-container {
+    max-width: 180px;
+    margin: 10px;
+  }
+  .team-member-info {
+    padding: 0 5px;
+  }
+  .team-member-name {
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+  .team-member-description,
+  .team-member-message {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .team-heading {
+    font-size: 1.6rem;
+  }
+  .team-member-image-container {
+    max-width: 120px;
+    margin: 10px;
+  }
+  .team-member-name {
+    font-size: 1.2rem;
+  }
+  .team-member-role {
+    font-size: 1rem;
+  }
+  .team-member-description,
+  .team-member-message {
+    font-size: 0.8rem;
+  }
+}
