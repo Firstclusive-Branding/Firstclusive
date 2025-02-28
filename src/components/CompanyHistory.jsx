@@ -84,66 +84,6 @@ const CompanyHistory = () => {
           </motion.div>
         ))}
       </section>
-
-      <motion.section
-        className="company-history-values"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <h2 className="company-history-values-title">
-          Our Values & Philosophy
-        </h2>
-        <div className="company-history-image-container">
-          <motion.img
-            src={results}
-            alt="Our Values"
-            className="company-history-image"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
-        <p className="company-history-values-description">
-          At Firstclusive, we operate on one simple belief: "Results, Not
-          Excuses." Our focus is not just on creating attractive designs but on
-          delivering measurable success to our clients. We believe in
-          innovation, adaptability, and client-centricity—ensuring that every
-          project we undertake brings real business growth. Our core philosophy
-          revolves around quality over quantity, meaning we don't take shortcuts
-          but instead build strong, impactful brands that last.
-        </p>
-      </motion.section>
-
-      <motion.section
-        className="company-history-future"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <h2 className="company-history-future-title">
-          The Future of Firstclusive
-        </h2>
-        <div className="company-history-image-container">
-          <motion.img
-            src={future}
-            alt="The Future"
-            className="company-history-image"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
-        <p className="company-history-future-description">
-          The journey doesn't stop here. We are actively working towards
-          revolutionising branding through cutting-edge AI, automation, and
-          data-driven marketing solutions. Our vision is to become a global
-          leader in branding & marketing, offering businesses of all sizes the
-          opportunity to establish a powerful and engaging brand identity. As we
-          move forward, we continue to evolve, expand, and push boundaries to
-          redefine what’s possible in the branding industry.
-        </p>
-      </motion.section>
     </div>
   );
 };
