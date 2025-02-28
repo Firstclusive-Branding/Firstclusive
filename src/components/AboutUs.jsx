@@ -6,7 +6,7 @@ import directorImage from "../assets/AboutUsAssets/Dr. Khizer Husaain Junaidy.jp
 import managingDirectorImage from "../assets/AboutUsAssets/Jamsheed Hussain Junaidy.jpg";
 import aboutUsHeroImage from "../assets/AboutUsAssets/aboutUsHero.png";
 import whoWeAreImage from "../assets/AboutUsAssets/who we are.png";
-import mission from "../assets/AboutUsAssets/mission.png";
+import mission from "../assets/AboutUsAssets/Mission.png";
 import WhatSetsUsApart from "../assets/AboutUsAssets/What Sets Us Apart.jpg";
 import LookingAhead from "../assets/AboutUsAssets/Looking Ahead.jpg";
 import LogoBranding from "../assets/AboutUsAssets/Logos Collage.png";
