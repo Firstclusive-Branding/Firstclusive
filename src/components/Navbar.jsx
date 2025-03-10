@@ -93,12 +93,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" onClick={closeMenu}>
+              <Link to="/our-portfolio" onClick={closeMenu}>
                 Our Portfolio
               </Link>
             </li>
             <li>
-              <Link to="/mission" onClick={closeMenu}>
+              <Link to="/mission-and-vision" onClick={closeMenu}>
                 Mission & Vision
               </Link>
             </li>

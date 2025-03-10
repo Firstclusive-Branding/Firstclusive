@@ -33,7 +33,6 @@ const Admin = () => {
 
   return (
     <div className="admin-container">
-      {/* Sidebar */}
       <div className={`sidebar ${isSidebarCollapsed ? "collapsed" : ""}`}>
         <div className="sidebar-header">
           <h3 className={`${isSidebarCollapsed ? "hidden" : ""}`}>

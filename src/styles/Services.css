@@ -33,7 +33,6 @@
 .service-text {
   font-size: 2rem;
   font-weight: bold;
-  transition: all 0.5s ease-in-out;
   writing-mode: sideways-lr;
   display: flex;
   width: 100%;
@@ -45,11 +44,13 @@
 .service-id {
   color: rgba(255, 255, 255, 0.4);
   padding: 1rem;
+  transition: color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .service-title {
   padding: 1rem;
   color: white;
+  transition: filter 0.3s ease-in-out;
 }
 
 .service-card:hover .service-bg {
@@ -59,6 +60,7 @@
 .service-card:hover .service-title,
 .service-card:hover .service-id {
   filter: drop-shadow(2px 2px 0 black);
+  color: #fff;
 }
 @media (max-width: 1024px) {
   .service-card {

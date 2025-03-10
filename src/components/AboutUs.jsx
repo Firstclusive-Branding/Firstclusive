@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
+
 import "../styles/AboutUs.css";
 import directorImage from "../assets/AboutUsAssets/Dr. Khizer Husaain Junaidy.jpeg";
 import managingDirectorImage from "../assets/AboutUsAssets/Jamsheed Hussain Junaidy.jpg";
@@ -20,15 +22,32 @@ const services = [
     img: LogoBranding,
     title: "Logo & Branding",
     class: "service-logo-branding",
+    IdName: "logo-branding",
   },
-  { img: UIUX, title: "UI/UX Design", class: "service-uiux" },
-  { img: WebDevelopment, title: "Web Development", class: "service-web-dev" },
+  {
+    img: UIUX,
+    title: "UI/UX Design",
+    class: "service-uiux",
+    IdName: "ui-ux-design",
+  },
+  {
+    img: WebDevelopment,
+    title: "Web Development",
+    class: "service-web-dev",
+    IdName: "web-development",
+  },
   {
     img: DigitalMarketing,
     title: "Digital Marketing",
     class: "service-digital-marketing",
+    IdName: "digital-marketing",
   },
-  { img: Printing, title: "Printing", class: "service-printing" },
+  {
+    img: Printing,
+    title: "Printing",
+    class: "service-printing",
+    IdName: "printing",
+  },
 ];
 
 const AboutUs = () => {
@@ -208,12 +227,14 @@ const AboutUs = () => {
         <div className="services-grid">
           {services.map((service, index) => (
             <div className={`service-card-au ${service.class}`} key={index}>
-              <img
-                src={service.img}
-                alt={service.title}
-                className="service-img"
-              />
-              <div className="service-title-au">{service.title}</div>
+              <Link to={`/our-services#${service.IdName}`} key={service.id}>
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="service-img"
+                />
+                <div className="service-title-au">{service.title}</div>
+              </Link>
             </div>
           ))}
         </div>

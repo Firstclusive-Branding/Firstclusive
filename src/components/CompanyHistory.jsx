@@ -6,7 +6,7 @@ import expansionGrowth from "../assets/Company-history/expansion-and-growth.jpg"
 import leader from "../assets/Company-history/leader.jpg";
 import innovation from "../assets/Company-history/innovation.jpg";
 import future from "../assets/Company-history/future.png";
-import results from "../assets/Company-history/results.jpg";
+import noExcuses from "../assets/Company-history/Not excuses.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -53,7 +53,7 @@ const CompanyHistory = () => {
           },
           {
             year: "Our Values & Philosophy",
-            img: results,
+            img: noExcuses,
             desc: "At Firstclusive, we operate on one simple belief: 'Results, Not Excuses.' Our focus is not just on creating attractive designs but on delivering measurable success to our clients. We believe in innovation, adaptability, and client-centricity—ensuring that every project we undertake brings real business growth. Our core philosophy revolves around quality over quantity, meaning we don't take shortcuts but instead build strong, impactful brands that last.",
           },
           {

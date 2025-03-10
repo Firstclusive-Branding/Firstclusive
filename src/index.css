@@ -3,6 +3,11 @@
 * {
   font-family: "BT Beau Sans", sans-serif;
 }
+*::selection {
+  background: #aef507;
+  color: #0e0e0e;
+  -webkit-text-fill-color: #0e0e0e;
+}
 html {
   scroll-behavior: smooth;
 }

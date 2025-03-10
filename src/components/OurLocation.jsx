@@ -16,8 +16,8 @@ const OurLocation = () => {
               Hyderabad, Telangana 500028
             </a>
             <h3>Phone Numbers</h3>
-            <a href="tel:00914031732040">+91 403-173-2040</a>
-            <a href="tel:00919885925529">+91 988-592-5529</a>
+            <a href="tel:18002087788">Toll Free: 1800-208-7788</a>
+            <a href="tel:+919966470788">+91 996-647-0788</a>
           </div>
         </div>
         <div className="map-container">

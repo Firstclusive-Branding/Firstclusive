@@ -1,0 +1,38 @@
+.development-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  text-align: center;
+}
+
+.development-container img {
+  width: 35vw;
+}
+
+.development-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.development-button {
+  text-decoration: none;
+  background-color: #afe507;
+  color: #0e0e0e;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(175, 229, 7, 0.6);
+}
+
+.development-button:hover {
+  background-color: #d2ff57;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(175, 229, 7, 0.9);
+}

@@ -47,11 +47,13 @@
 }
 
 .contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #1a1a1a;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-  text-align: center;
   width: 320px;
   transition: box-shadow 0.3s ease;
   flex-grow: 1;
@@ -166,7 +168,9 @@
   background-color: #afe507;
   border-color: #92c404;
 }
-
+.contact-checkbox-options input[type="checkbox"]:focus {
+  box-shadow: none;
+}
 .contact-button {
   background-color: #afe507;
   color: black;

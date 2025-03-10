@@ -1,19 +1,17 @@
 import directorImage from "../assets/AboutUsAssets/Dr. Khizer Husaain Junaidy.jpeg";
 import managingDirectorImage from "../assets/AboutUsAssets/Jamsheed Hussain Junaidy.jpg";
-
+import Areeb from "../assets/OurTeam/Areeb.png";
+import Juber from "../assets/OurTeam/Juber.png";
+import Nithish from "../assets/OurTeam/Nithish.png";
+import Raghava from "../assets/OurTeam/Raghava.png";
+import Sanjay from "../assets/OurTeam/Sanjay.png";
+import Siva from "../assets/OurTeam/Siva.png";
+import Mujtaba from "../assets/OurTeam/Mujtaba.png";
+import Syed from "../assets/OurTeam/Syed.png";
+import Moqtar from "../assets/OurTeam/Moqtar.jpg";
 const TeamData = [
   {
     id: 1,
-    name: "Dr. Khizer Hussain Junaidy",
-    role: "Director",
-    image: directorImage,
-    description:
-      "Dr. Khizer oversees the overall operations at Firstclusive, ensuring smooth and effective functioning of every department.",
-    message_from:
-      "As the Director, I am dedicated to steering the company toward greater achievements and fostering a culture of innovation and teamwork.",
-  },
-  {
-    id: 2,
     name: "Jamsheed Junaidy",
     role: "Managing Director",
     image: managingDirectorImage,
@@ -23,20 +21,30 @@ const TeamData = [
       "As Managing Director, my mission is to lead Firstclusive to new heights of success by encouraging collaboration and innovation.",
   },
   {
+    id: 2,
+    name: "Dr. Khizer Hussain Junaidy",
+    role: "Director",
+    image: directorImage,
+    description:
+      "Dr. Khizer oversees the overall operations at Firstclusive, ensuring smooth and effective functioning of every department.",
+    message_from:
+      "As the Director, I am dedicated to steering the company toward greater achievements and fostering a culture of innovation and teamwork.",
+  },
+  {
     id: 3,
     name: "Moqtar",
-    role: "Senior Accountant",
-    image: "https://picsum.photos/250?random=3",
+    role: "HR Manager",
+    image: Moqtar,
     description:
-      "Moqtar is responsible for managing financial records, ensuring all accounts are accurate and compliant with regulations.",
+      "Moqtar oversees employee relations and workplace culture while also managing attendance, payroll, and financial records at Firstclusive.",
     message_from:
-      "I am committed to maintaining the financial stability of Firstclusive, ensuring the company and clients can confidently rely on our financial management.",
+      "I am dedicated to fostering a productive work environment while ensuring accurate financial management, timely salaries, and compliance with company policies.",
   },
   {
     id: 4,
-    name: "Syed",
+    name: "Syed Abdul Razzak",
     role: "Manager",
-    image: "https://picsum.photos/250?random=4",
+    image: Syed,
     description:
       "Syed coordinates daily operations, making sure that projects are progressing on schedule and that deadlines are met.",
     message_from:
@@ -44,73 +52,73 @@ const TeamData = [
   },
   {
     id: 5,
-    name: "Areeb",
-    role: "Assistant Manager",
-    image: "https://picsum.photos/250?random=5",
+    name: "Areeb Gayaz Khan",
+    role: "Front Office Coordinator",
+    image: Areeb,
     description:
-      "Areeb assists in managing daily tasks, schedules, and resources to help maintain an organized and productive workflow.",
+      "Areeb oversees front desk operations, manages communications, and ensures a welcoming environment for clients and visitors. He plays a key role in coordinating administrative tasks and maintaining office efficiency.",
     message_from:
-      "I’m here to support both our team and our clients, ensuring the smooth operation of all activities on a daily basis.",
+      "I strive to create a seamless front office experience by managing communications, scheduling, and ensuring a professional and organized workspace for both our team and clients.",
   },
   {
     id: 6,
-    name: "Shiva",
-    role: "Graphic Designer",
-    image: "https://picsum.photos/250?random=6",
-    description:
-      "Shiva is responsible for designing visual concepts for branding, marketing, and advertising materials that reflect the company’s vision.",
-    message_from:
-      "I enjoy using creativity to visually communicate a brand's identity and create designs that leave a lasting impression.",
-  },
-  {
-    id: 7,
-    name: "Siva",
+    name: "Siva Reddy",
     role: "Video Editor",
-    image: "https://picsum.photos/250?random=7",
+    image: Siva,
     description:
       "Siva edits video content, enhancing each project to ensure a compelling and engaging visual narrative.",
     message_from:
       "I’m passionate about producing captivating videos that tell powerful stories and leave an unforgettable impact.",
   },
   {
-    id: 8,
-    name: "Mujtaba",
+    id: 7,
+    name: "Mujtaba Ali Khan",
     role: "Web Developer",
-    image: "https://picsum.photos/250?random=8",
+    image: Mujtaba,
     description:
       "Mujtaba specializes in crafting visually appealing and highly functional front-end interfaces, ensuring seamless user interactions and responsive designs.",
     message_from:
       "I'm passionate about turning creative concepts into interactive web experiences, making every interface intuitive and engaging for users.",
   },
   {
-    id: 9,
-    name: "Sanjay",
+    id: 8,
+    name: "N. Sanjay",
     role: "Web Developer",
-    image: "https://picsum.photos/250?random=9",
+    image: Sanjay,
     description:
       "Sanjay specializes in building custom websites using WordPress, creating scalable and high-performance digital solutions.",
     message_from:
       "My passion lies in developing websites that are both functional and visually appealing, exceeding the expectations of our clients.",
   },
   {
-    id: 10,
-    name: "Nithish",
+    id: 9,
+    name: "V. Nithish",
     role: "UI/UX Designer",
-    image: "https://picsum.photos/250?random=10",
+    image: Nithish,
     description:
       "Nithish designs user interfaces and optimizes the user experience, ensuring our digital products are functional, aesthetically pleasing, and easy to navigate.",
     message_from:
       "My focus is on creating seamless user experiences that are not only beautiful but also intuitive and user-friendly.",
   },
   {
-    id: 11,
-    name: "Ragava",
+    id: 10,
+    name: "B. Raghava",
     role: "Graphic Designer",
-    image: "https://picsum.photos/250?random=11",
+    image: Raghava,
     description:
       "Ragava creates visual concepts for branding, marketing, and advertising, focusing on impactful designs that reflect the essence of the brand.",
     message_from:
       "I’m passionate about bringing creativity into my designs to visually tell a brand's story and create meaningful connections with the audience.",
+  },
+  {
+    id: 11,
+    name: "Juber Mulla",
+    role: "Back-end Developer",
+    image: Juber,
+    description:
+      "Juber specializes in building and optimizing server-side applications, ensuring seamless functionality, security, and performance for web solutions.",
+    message_from:
+      "I’m passionate about developing efficient and scalable backend systems that power robust applications and enhance user experiences.",
   },
 ];
 

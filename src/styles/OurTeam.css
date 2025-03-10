@@ -45,9 +45,13 @@
 .team-member-image-container {
   width: 100%;
   max-width: 250px;
+  max-height: 250px;
   overflow: hidden;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   margin: 20px;
+  background-color: white;
 }
 .team-member-img {
   width: 100%;

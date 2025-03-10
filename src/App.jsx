@@ -28,7 +28,12 @@ import JobApply from "./components/JobApply";
 import OurLocation from "./components/OurLocation";
 import OurTeam from "./components/OurTeam";
 import CompanyHistory from "./components/CompanyHistory";
-
+import OurPortfolio from "./components/OurPortfolio";
+import MissionandVision from "./components/MissionandVision";
+import ManageTeamMembers from "./components/ManageTeamMembers";
+import ManageCareers from "./components/ManageCareers";
+import ManageJobApplicants from "./components/ManageJobApplicants";
+import FloatingIcons from "./components/FloatingIcons";
 const MainLayout = () => {
   const location = useLocation();
 
@@ -41,6 +46,7 @@ const MainLayout = () => {
       <Navbar />
       <Outlet />
       <Footer />
+      <FloatingIcons />
     </div>
   );
 };
@@ -87,6 +93,8 @@ const myRoutes = createBrowserRouter([
       { path: "/our-location", element: <OurLocation /> },
       { path: "/our-team", element: <OurTeam /> },
       { path: "/company-history", element: <CompanyHistory /> },
+      { path: "/our-portfolio", element: <OurPortfolio /> },
+      { path: "/mission-and-vision", element: <MissionandVision /> },
     ],
   },
   {
@@ -108,6 +116,11 @@ const myRoutes = createBrowserRouter([
           {
             path: "content-management",
             element: <AdminRoute element={<ContentManagement />} />,
+            children: [
+              { path: "team", element: <ManageTeamMembers /> },
+              { path: "careers", element: <ManageCareers /> },
+              { path: "job-applicants", element: <ManageJobApplicants /> },
+            ],
           },
           {
             path: "user-management",

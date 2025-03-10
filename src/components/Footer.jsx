@@ -5,11 +5,11 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -32,7 +32,7 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             <FaPhoneAlt className="footer-contact-icon" />
-            <a href="tel:+919885925529"> +91-9885925529</a>
+            <a href="tel:+919966470788"> +91 996-647-0788</a>
           </p>
           <p>
             <FaEnvelope className="footer-contact-icon" />
@@ -75,11 +75,11 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
             <a
-              href="https://twitter.com/firstclusive"
+              href="https://x.com/firstclusive"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter />
+              <FaXTwitter />
             </a>
           </div>
         </div>

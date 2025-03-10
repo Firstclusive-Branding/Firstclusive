@@ -30,7 +30,7 @@ const AdCarousel = () => {
     <div className="carousel-container">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCreative]}
-        lazy={true}
+        lazy="true"
         effect={"creative"}
         creativeEffect={{
           prev: {

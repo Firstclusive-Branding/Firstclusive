@@ -146,7 +146,7 @@
 .hamburger {
   display: none;
   font-size: 2rem;
-  margin: 0 4rem;
+  margin: 0 1rem;
   color: #afe507;
   cursor: pointer;
 }

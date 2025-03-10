@@ -49,7 +49,7 @@ const OurServices = () => {
         if (element) {
           const headerOffset = 150;
           const elementPosition =
-            element.getBoundingClientRect().top + window.pageYOffset;
+            element.getBoundingClientRect().top + window.scrollY;
 
           const offsetPosition = elementPosition - headerOffset - 20;
 
