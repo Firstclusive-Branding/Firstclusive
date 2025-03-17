@@ -101,7 +101,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          © Since 2014 - Made with <FaHeart />
+          Made with <FaHeart />
           by Firstclusive.
         </p>
       </div>
