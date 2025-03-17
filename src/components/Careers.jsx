@@ -8,7 +8,7 @@ const jobs = [
   {
     id: 1,
     title: "Digital Marketing Specialist",
-    location: "Bengaluru, India",
+    location: "Hyderabad, India",
     description:
       "Join our marketing team to help drive innovative digital marketing strategies for our clients across various industries.",
     details: {
@@ -32,7 +32,7 @@ const jobs = [
   {
     id: 2,
     title: "Social Media Manager",
-    location: "Delhi, India",
+    location: "Hyderabad, India",
     description:
       "Seeking a creative Social Media Manager to grow our brand presence across multiple platforms and drive engagement.",
     details: {
@@ -56,7 +56,7 @@ const jobs = [
   {
     id: 3,
     title: "Content Writer",
-    location: "Kolkata, India",
+    location: "Hyderabad, India",
     description:
       "Looking for a creative Content Writer to develop compelling and SEO-friendly content for websites, blogs, and social media.",
     details: {
@@ -80,7 +80,7 @@ const jobs = [
   {
     id: 4,
     title: "Sales Executive",
-    location: "Lucknow, India",
+    location: "Hyderabad, India",
     description:
       "Looking for a driven Sales Executive to generate leads and convert potential clients into long-term business partners.",
     details: {

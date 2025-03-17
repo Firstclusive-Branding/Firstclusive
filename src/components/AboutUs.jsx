@@ -96,22 +96,17 @@ const AboutUs = () => {
             <div className="who-we-are-content">
               <p>
                 <strong>Firstclusive Branding Private Limited</strong> is a
-                premier digital and creative agency based in Hyderabad, India.
-                Established in <strong>2014</strong>, we are driven by a passion
-                for building brands that make an impact. Our expertise spans
-                across multiple domains, with a special focus on healthcare
-                branding, ensuring that doctors, hospitals, and medical
-                professionals establish a strong and credible presence in the
-                industry.
-              </p>
-
-              <p>
-                Over the years, we have successfully partnered with 800+
-                clients, delivering high-quality branding, web development,
-                digital marketing, UI/UX design, and printing solutions. Whether
-                you're a startup, a growing business, or an established
-                enterprise, our results-driven approach ensures that your brand
-                stands out in a competitive market.
+                premier digital and creative agency based in Hyderabad, India,
+                established in <strong>2014</strong> and driven by a passion for
+                building impactful brands. Our expertise spans multiple domains,
+                with a special focus on healthcare branding, ensuring that
+                doctors, hospitals, and medical professionals establish a strong
+                and credible presence in the industry. Over the years, we have
+                successfully partnered with over 800 clients by delivering
+                high-quality branding, web development, digital marketing, UI/UX
+                design, and printing solutions, ensuring that whether you’re a
+                startup, a growing business, or an established enterprise, your
+                brand stands out in a competitive market.
               </p>
             </div>
           </div>

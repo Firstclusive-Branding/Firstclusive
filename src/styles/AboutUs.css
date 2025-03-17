@@ -455,7 +455,7 @@
   .services-section p,
   .what-set-us-apart-container li,
   .profile-section p {
-    width: 80%;
+    width: 100%;
     font-size: 16px;
   }
   .profile-section p {
@@ -465,7 +465,7 @@
   .our-mission-image,
   .what-set-us-apart-image,
   .looking-ahead-image {
-    width: 500px;
+    width: 600px;
   }
   .services-grid {
     max-width: 800px;
@@ -495,7 +495,7 @@
   }
   .aboutUs-hero-section {
     padding-top: 10%;
-    height: 60vh;
+    height: auto;
     justify-content: start;
   }
   .aboutUs-hero-image {
@@ -525,7 +525,9 @@
   .company-section,
   .services-section,
   .profile-section {
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
   }
   .company-section p,
   .services-section p,
@@ -537,7 +539,7 @@
   .our-mission-image,
   .what-set-us-apart-image,
   .looking-ahead-image {
-    width: 300px;
+    width: 350px;
   }
   .what-set-us-apart-list {
     width: 80%;

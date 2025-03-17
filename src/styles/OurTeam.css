@@ -98,11 +98,16 @@
   .team-member {
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
 }
 @media screen and (max-width: 480px) {
   .team-heading {
     font-size: 2rem;
+  }
+  .team-member {
+    width: 90%;
+    padding: 5px;
   }
   .team-member-image-container {
     max-width: 180px;
