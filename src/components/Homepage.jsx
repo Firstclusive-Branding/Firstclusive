@@ -2,9 +2,10 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/Homepage.css";
 
+const Slogan = lazy(() => import("../components/Slogan"));
 const AdCarousel = lazy(() => import("../components/AdCarousel"));
 const Branding = lazy(() => import("../components/Branding"));
-const Hero = lazy(() => import("../components/Hero"));
+// const Hero = lazy(() => import("../components/Hero"));
 const About = lazy(() => import("../components/About"));
 const Services = lazy(() => import("../components/Services"));
 const Gallery = lazy(() => import("../components/Gallery"));
@@ -32,7 +33,7 @@ const Homepage = () => {
           <Branding />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          <motion.section
+          {/* <motion.section
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -40,7 +41,8 @@ const Homepage = () => {
             <div className="heroApp">
               <Hero />
             </div>
-          </motion.section>
+          </motion.section> */}
+          <Slogan />
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
@@ -54,6 +56,7 @@ const Homepage = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
+            viewport={{ once: true }}
           >
             <div className="servicesApp">
               <Services />
@@ -66,6 +69,7 @@ const Homepage = () => {
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            viewport={{ once: true }}
           >
             <div className="aboutApp">
               <About />

@@ -80,7 +80,7 @@ const ContactUs = () => {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           Let's Connect & Create Something Amazing Together
         </motion.h1>
@@ -89,7 +89,7 @@ const ContactUs = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           Your success starts with a conversation. Get in touch with us today!
         </motion.p>
@@ -121,7 +121,7 @@ const ContactUs = () => {
               initial={{ opacity: 0, scale: 0.7 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{
                 y: -12,
                 scale: 1.05,
@@ -158,7 +158,7 @@ const ContactUs = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <img src={ContactImage} alt="Contact Us" />
         </motion.div>
@@ -168,7 +168,7 @@ const ContactUs = () => {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <form className="contact-form" onSubmit={onSubmit}>
             <input type="text" placeholder="Your Name" name="name" required />

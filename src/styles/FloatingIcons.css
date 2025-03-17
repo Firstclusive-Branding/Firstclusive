@@ -25,16 +25,16 @@
   background-color: #24d266;
 }
 
-/* .chat {
+.phone {
   left: 20px;
   background-color: #007bff;
   border: none;
-} */
+}
 
 .floating-icon:hover {
   opacity: 0.8;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .floating-icon {
     padding: 8px;
     width: 40px;

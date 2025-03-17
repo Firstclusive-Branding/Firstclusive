@@ -128,6 +128,9 @@
   transition: filter 0.3s ease;
   animation: logoScale 1s infinite alternate ease-in-out;
 }
+.logo-image:nth-child(even) {
+  animation-delay: 0.5s;
+}
 .logo-image:hover {
   filter: drop-shadow(0 0 15px #fff);
 }
@@ -258,7 +261,7 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .main-heading {
     width: 320px;
     font-size: 1.3rem;

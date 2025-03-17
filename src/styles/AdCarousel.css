@@ -1,5 +1,4 @@
 .carousel-container {
-  width: 100%;
   max-width: 1400px;
   margin: auto;
   padding: 20px 0;
@@ -49,7 +48,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .swiper-pagination-bullet {
     scale: 0.6;
     transform: translateY(20px);

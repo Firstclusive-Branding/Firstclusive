@@ -8,8 +8,11 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaGoogle,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaHeart } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+// import { TbDeviceLandlinePhone } from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -32,6 +35,10 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             <FaPhoneAlt className="footer-contact-icon" />
+            <a href="tel:18002087788"> 1 800-208-7788</a>
+          </p>
+          <p>
+            <IoLogoWhatsapp className="footer-contact-icon" />
             <a href="tel:+919966470788"> +91 996-647-0788</a>
           </p>
           <p>
@@ -81,12 +88,22 @@ const Footer = () => {
             >
               <FaXTwitter />
             </a>
+            <a
+              href="https://maps.app.goo.gl/beasMFBhB2ZW6V7M8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGoogle />
+            </a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© Since 2014 - Made with ❤ by Firstclusive.</p>
+        <p>
+          © Since 2014 - Made with <FaHeart />
+          by Firstclusive.
+        </p>
       </div>
     </footer>
   );

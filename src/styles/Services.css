@@ -73,19 +73,19 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .services-container {
     display: flex;
     flex-direction: column;
   }
 
   .service-card {
-    height: 80px;
-    width: 80%;
+    height: 100px;
+    width: 90%;
   }
 
   .service-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     writing-mode: horizontal-tb;
   }
 

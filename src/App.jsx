@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -10,13 +10,12 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
+
 import Homepage from "./components/Homepage";
 import AboutUs from "./components/AboutUs";
-import Admin from "./components/Admin";
+// import Admin from "./components/Admin";
 import AdminLogin from "./components/AdminLogin";
 import NotFound from "./components/NotFound";
-import { auth } from "./firebase";
 import AdminDashboard from "./components/AdminDashboard";
 import ContentManagement from "./components/ContentManagement";
 import UserManagement from "./components/UserManagement";
@@ -34,6 +33,9 @@ import ManageTeamMembers from "./components/ManageTeamMembers";
 import ManageCareers from "./components/ManageCareers";
 import ManageJobApplicants from "./components/ManageJobApplicants";
 import FloatingIcons from "./components/FloatingIcons";
+import AdminSidebar from "./components/AdminSidebar";
+import AdminNavbar from "./components/AdminNavbar";
+
 const MainLayout = () => {
   const location = useLocation();
 
@@ -53,31 +55,37 @@ const MainLayout = () => {
 
 const AdminLayout = () => {
   return (
-    <Admin>
-      <Outlet />
-    </Admin>
+    <div className="admin-layout">
+      <AdminNavbar />
+      <AdminSidebar />
+      <div className="admin-content">
+        <Outlet />
+      </div>
+    </div>
   );
 };
 
+// 🔹 Updated AdminRoute for localStorage-based authentication
 const AdminRoute = ({ element }) => {
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role");
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-      } else {
-        setUser(null);
-        navigate("/admin");
-      }
-    });
+    console.log("AdminRoute Check:", { token, role });
 
-    return () => unsubscribe();
-  }, [navigate]);
+    if (!token || role !== "admin") {
+      console.log(
+        "Redirecting to /admin login due to missing or incorrect role"
+      );
+      navigate("/admin", { replace: true });
+    }
+  }, [navigate, token, role]);
 
-  return user ? element : null;
+  return token && role === "admin" ? element : null;
 };
+
+// 🔹 Updated Router Configuration
 const myRoutes = createBrowserRouter([
   {
     path: "/",
@@ -117,7 +125,6 @@ const myRoutes = createBrowserRouter([
             path: "content-management",
             element: <AdminRoute element={<ContentManagement />} />,
             children: [
-              { path: "team", element: <ManageTeamMembers /> },
               { path: "careers", element: <ManageCareers /> },
               { path: "job-applicants", element: <ManageJobApplicants /> },
             ],
@@ -125,6 +132,10 @@ const myRoutes = createBrowserRouter([
           {
             path: "user-management",
             element: <AdminRoute element={<UserManagement />} />,
+          },
+          {
+            path: "team",
+            element: <AdminRoute element={<ManageTeamMembers />} />,
           },
           { path: "settings", element: <AdminRoute element={<Settings />} /> },
         ],

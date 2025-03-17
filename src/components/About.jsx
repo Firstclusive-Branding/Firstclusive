@@ -1,10 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/About.css";
+import { IoBriefcaseSharp, IoLayersSharp } from "react-icons/io5";
+import { FaCogs } from "react-icons/fa";
+import { FaFaceSmileBeam } from "react-icons/fa6";
+import aboutUs from "../assets/AboutUsAssets/about-us.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   const counterRef = useRef(null);
-  const targetCounts = [10, 800, 100, 5];
+  const targetCounts = [11, 850, 100, 5];
   const duration = 1000;
   const steps = 100;
   const intervalTime = duration / steps;
@@ -49,54 +54,63 @@ const About = () => {
         <div className="about-content">
           <article className="about-text">
             <p>
-              Firstclusive Branding is a leading creative and digital agency
-              based in Hyderabad, India. Since our establishment in 2014, we
-              have been empowering businesses with innovative branding, web
-              development, and digital marketing solutions.
+              <strong>Firstclusive</strong> has been shaping brands and
+              businesses since 2014. We help companies build{" "}
+              <strong>strong identities</strong> and grow faster. From{" "}
+              <strong>branding</strong> to
+              <strong>website design</strong> and{" "}
+              <strong>high-quality printing</strong>, we create solutions that
+              make your business stand out.
             </p>
             <p>
-              With over <strong>800+ clients</strong> globally, we specialise in
-              crafting powerful brand identities, high-performance websites, and
-              marketing strategies that drive real results.
+              We started as a proprietorship and became a private limited
+              company in 2023, earning recognition as a
+              <strong> Startup India-registered</strong> company. With
+              <strong> 800+ clients</strong> worldwide, we combine creativity
+              with strategy to deliver real growth. No fluff, just results that
+              matter.
             </p>
           </article>
           <div className="about-image">
-            <img
-              src="https://picsum.photos/id/239/400/250"
-              alt="About Firstclusive"
-            />
+            <img src={aboutUs} alt="About Firstclusive" />
           </div>
         </div>
 
-        <div className="about-footer" ref={counterRef}>
+        <motion.div
+          className="about-footer"
+          ref={counterRef}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <h3>Why Choose Firstclusive?</h3>
           <div className="counter-container">
             <div className="counter-item">
-              <div className="counter-circle counter-circle-odd">
-                {counters[0]}+
-              </div>
+              <IoBriefcaseSharp />
+
+              <h2>{counters[0]}+</h2>
               <p>Years of Experience</p>
             </div>
             <div className="counter-item">
-              <div className="counter-circle counter-circle-even">
-                {counters[1]}+
-              </div>
+              <IoLayersSharp />
+
+              <h2>{counters[1]}+</h2>
               <p>Successful Projects</p>
             </div>
             <div className="counter-item">
-              <div className="counter-circle counter-circle-odd">
-                {counters[2]}%
-              </div>
+              <FaFaceSmileBeam />
+              <h2>{counters[2]}%</h2>
               <p>Client Satisfaction</p>
             </div>
             <div className="counter-item">
-              <div className="counter-circle counter-circle-even">
-                {counters[3]}+
-              </div>
+              <FaCogs />
+
+              <h2>{counters[3]}+</h2>
               <p>Core Services</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

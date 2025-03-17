@@ -485,7 +485,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .aboutUs-header {
     width: 300px;
     margin-bottom: 3rem;

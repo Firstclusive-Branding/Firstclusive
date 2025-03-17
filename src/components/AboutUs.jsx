@@ -63,6 +63,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="aboutUs-hero-image">
             <img src={aboutUsHeroImage} alt="About Us" />
@@ -83,6 +84,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="who-we-are-heading">
             <h2>Who We Are</h2>
@@ -121,6 +123,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="our-mission-header">
             <h2>Our Mission</h2>
@@ -149,6 +152,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="what-set-us-apart-header">
             <h2>What Sets Us Apart?</h2>
@@ -196,6 +200,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="looking-ahead-header">
             <h2>Looking Ahead</h2>
@@ -222,6 +227,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <h2 className="services-heading">What We Do</h2>
         <div className="services-grid">
@@ -245,6 +251,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <h2>Meet Our Leadership</h2>
         <div className="profile-container">

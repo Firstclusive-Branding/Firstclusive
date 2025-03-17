@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { auth } from "../firebase";
-
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/AdminLogin.css";
 
 const AdminLogin = () => {
@@ -11,24 +8,47 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        navigate("/admin/dashboard");
-      })
-      .catch((error) => {
-        setError("Invalid Credentials. Try Again");
+    try {
+      const response = await fetch("http://localhost:4000/api/auth/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (!data.data.role) {
+          setError("Login failed. No role assigned.");
+          return;
+        }
+
+        localStorage.setItem("token", data.data.encoded_token);
+        localStorage.setItem("role", data.data.role);
+
+        navigate("/admin/dashboard");
+      } else {
+        setError(data.message || "Invalid Credentials. Try Again");
+      }
+    } catch (error) {
+      setError("Server error. Please try again later.");
+    }
   };
 
   return (
     <div className="admin-login">
-      <div className="login-box">
+      <Link to="/" className="admin-back-link">
+        <i className="fas fa-arrow-left"></i> Home
+      </Link>
+      <div className="admin-login-box">
         <h2>Admin Login</h2>
         <form onSubmit={handleLogin}>
-          <div className="input-field">
+          <div className="admin-input-field">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -39,7 +59,7 @@ const AdminLogin = () => {
               required
             />
           </div>
-          <div className="input-field">
+          <div className="admin-input-field">
             <label htmlFor="password">Password</label>
             <input
               type="password"
@@ -50,8 +70,8 @@ const AdminLogin = () => {
               required
             />
           </div>
-          {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="login-btn">
+          {error && <p className="admin-error-message">{error}</p>}
+          <button type="submit" className="admin-login-btn">
             Login
           </button>
         </form>

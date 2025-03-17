@@ -1,14 +1,27 @@
-/* Admin Login Page Styles */
 .admin-login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #121212; /* Dark background */
+  background-color: #121212;
+  position: relative;
 }
-
-.login-box {
-  background-color: #1e1e1e; /* Dark box background */
+.admin-back-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: #afe507;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.admin-back-link:hover {
+  background-color: #8eaf04;
+}
+.admin-login-box {
+  background-color: #1e1e1e;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -16,25 +29,25 @@
   max-width: 400px;
 }
 
-h2 {
+.admin-login-box h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
-  color: #ffffff; /* Light text color */
+  color: #ffffff;
 }
 
-.input-field {
+.admin-input-field {
   margin-bottom: 20px;
 }
 
-.input-field label {
+.admin-input-field label {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
   color: #ffffff; /* Light label text */
 }
 
-.input-field input {
+.admin-input-field input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -45,12 +58,12 @@ h2 {
   box-sizing: border-box;
 }
 
-.input-field input:focus {
+.admin-input-field input:focus {
   border-color: #afe507; /* Highlight border on focus */
   outline: none;
 }
 
-.login-btn {
+.admin-login-btn {
   width: 100%;
   padding: 12px;
   background-color: #afe507; /* Green button */
@@ -61,11 +74,11 @@ h2 {
   cursor: pointer;
 }
 
-.login-btn:hover {
+.admin-login-btn:hover {
   background-color: #8eaf04; /* Darker green on hover */
 }
 
-.error-message {
+.admin-error-message {
   color: #e60000; /* Red error message */
   font-size: 14px;
   text-align: center;

@@ -107,7 +107,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .location-container {
     gap: 15px;
   }

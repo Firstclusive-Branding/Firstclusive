@@ -9,3 +9,29 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+
+.admin-content {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@media (max-width: 1024px) {
+  .admin-content {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    margin-left: 12%;
+    margin-top: 12%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-content {
+    margin-left: 15%;
+    margin-top: 15%;
+  }
+}

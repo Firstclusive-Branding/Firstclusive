@@ -1,0 +1,54 @@
+/* Slogan.css */
+.slogan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slogan-text {
+  font-size: 8vw;
+  margin: -10px auto;
+  font-weight: bold;
+  letter-spacing: 8px;
+  color: transparent;
+  will-change: transform;
+  text-align: center;
+}
+
+.results {
+  -webkit-text-stroke: 2px #aeff07;
+}
+
+.slogan-not {
+  -webkit-text-stroke: 2px #b61b1b;
+}
+.not-excuses {
+  -webkit-text-stroke: 2px #fff;
+}
+
+@media (max-width: 1024px) {
+  .slogan-container {
+    height: 30vh;
+  }
+  .slogan-text {
+    font-size: 9vw;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan-text {
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan-container {
+    height: auto;
+    margin: 5% auto;
+  }
+  .slogan-text {
+    font-size: 2.5rem;
+  }
+}

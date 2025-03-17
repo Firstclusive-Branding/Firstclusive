@@ -1,7 +1,8 @@
 .careers-container {
   background: url("../assets/DotBg.png");
   color: #ffffff;
-  padding: 80px 20px;
+  padding: 120px 20px;
+  padding-bottom: 40px;
   min-height: 100vh;
 }
 
@@ -120,7 +121,7 @@
     padding: 10px 20px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .jobs-list {
     max-width: 100%;
   }

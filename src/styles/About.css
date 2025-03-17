@@ -1,6 +1,7 @@
 .about {
   color: #ffffff;
   padding: 60px 20px;
+  padding-bottom: 0;
   text-align: center;
 }
 
@@ -56,16 +57,13 @@
   transform: scale(1.2);
 }
 .about-footer {
-  background-color: #181818;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   margin-top: 50px;
 }
 
 .about-footer h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #afe507;
   margin-bottom: 30px;
 }
@@ -74,37 +72,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8rem;
+  margin-top: 30px;
 }
 
 .counter-item {
+  width: 220px;
   text-align: center;
   justify-items: center;
-  margin-left: -3%;
 }
-.counter-item:first-child {
-  margin-left: 0;
+.counter-item svg {
+  width: 100px;
+  height: 100px;
+  stroke: #afe507;
+  stroke-width: 10;
+  fill: none;
 }
-.counter-circle {
-  width: 220px;
-  height: 220px;
-  color: #0e0e0e;
-  font-size: 3rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-.counter-circle-odd {
-  background: radial-gradient(#fff 10%, hsla(0, 0%, 5%, 0.5));
-}
-.counter-circle-even {
-  background: radial-gradient(#fff 10%, hsla(75, 94%, 46%, 0.5));
+.counter-item h2 {
+  font-size: 2.5rem;
+  color: #afe507;
+  margin-top: 10px;
 }
 .counter-item p {
   font-size: 1.1rem;
-  font-weight: 300;
+  margin: 0;
+  color: #ddd;
 }
+
 @media (max-width: 1024px) {
   .about {
     padding: 40px 20px;
@@ -126,9 +120,8 @@
   .about-footer h3 {
     font-size: 1.8rem;
   }
-  .counter-circle {
-    width: 180px;
-    height: 180px;
+
+  .counter-item h2 {
     font-size: 2.2rem;
   }
   .counter-item p {
@@ -150,19 +143,25 @@
     padding: 15px;
   }
   .about-footer h3 {
-    font-size: 1.6rem;
-  }
-  .counter-circle {
-    width: 150px;
-    height: 150px;
     font-size: 1.8rem;
   }
+
+  .counter-container {
+    gap: 5rem;
+  }
+  .counter-item svg {
+    width: 60px;
+    height: 60px;
+  }
+  .counter-item h2 {
+    font-size: 2.5rem;
+  }
   .counter-item p {
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .about {
     padding: 0;
   }
@@ -187,21 +186,34 @@
     padding: 10px;
   }
   .about-footer h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  .counter-circle {
-    width: 90px;
-    height: 90px;
-    font-size: 1.1rem;
+  .counter-container {
+    gap: 1rem;
+  }
+  .counter-item svg {
+    width: 45px;
+    height: 45px;
+  }
+  .counter-item h2 {
+    font-size: 2rem;
   }
   .counter-item p {
-    font-size: 10px;
-    margin: 15%;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 370px) {
-  .counter-circle {
-    width: 80px;
-    height: 80px;
+  .counter-container {
+    gap: 10px;
+  }
+  .counter-item svg {
+    width: 45px;
+    height: 45px;
+  }
+  .counter-item h2 {
+    font-size: 1.2rem;
+  }
+  .counter-item p {
+    font-size: 0.7rem;
   }
 }

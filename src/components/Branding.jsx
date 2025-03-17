@@ -8,19 +8,19 @@ const BrandingAnimation = () => {
     <section className="branding-container" id="home">
       <div className="branding-text-container">
         <motion.h1
-          initial={{ opacity: 0, x: -300 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false }}
+          initial={{ x: "-50vw" }}
+          whileInView={{ x: 0 }}
+          transition={{ type: "spring" }}
+          viewport={{ once: true }}
           className="branding-text firstclusive"
         >
           FIRSTCLUSIVE
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, x: 300 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false }}
+          initial={{ x: "50vw" }}
+          whileInView={{ x: 0 }}
+          transition={{ type: "spring" }}
+          viewport={{ once: true }}
           className="branding-text branding"
         >
           BRANDING

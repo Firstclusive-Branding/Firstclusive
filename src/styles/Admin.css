@@ -169,10 +169,9 @@
   color: #ccc;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .dashboard-container {
-    flex-direction: column; /* Stack sidebar and content */
+    flex-direction: column;
   }
 
   .sidebar {

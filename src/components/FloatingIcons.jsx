@@ -1,5 +1,5 @@
 import React from "react";
-import { FaWhatsapp, FaComments } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import "../styles/FloatingIcons.css";
 import { motion } from "framer-motion";
@@ -28,9 +28,9 @@ const FloatingIcons = () => {
         <FaWhatsapp size={40} />
       </a>
 
-      {/* <button className="floating-icon chat">
-        <FaComments size={30} />
-      </button> */}
+      <a href="tel:18002087788" className="floating-icon phone">
+        <FaPhoneAlt size={30} />
+      </a>
     </motion.div>
   );
 };
