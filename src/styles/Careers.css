@@ -107,6 +107,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .careers-container {
+    padding: 90px 20px;
+  }
   .careers-title {
     font-size: 2.5rem;
   }

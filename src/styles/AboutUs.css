@@ -523,8 +523,7 @@
   }
 
   .company-section,
-  .services-section,
-  .profile-section {
+  .services-section {
     width: 90%;
     margin: 0 auto;
     padding: 0;
@@ -533,7 +532,7 @@
   .services-section p,
   .what-set-us-apart-container li,
   .profile-section p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .who-we-are-image,
   .our-mission-image,
@@ -560,6 +559,13 @@
     bottom: 40%;
     width: 200%;
   }
+  .profile-section {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .profile-section h2 {
+    margin: 2rem 0;
+  }
   .profile-container {
     flex-direction: column;
     align-items: center;
@@ -571,10 +577,10 @@
     font-size: 1rem;
   }
   .profile-card {
-    width: 80%;
+    width: 90%;
   }
   .profile-card img {
-    width: 40%;
+    width: 50%;
   }
 }
 
