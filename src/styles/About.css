@@ -134,10 +134,10 @@
     gap: 10px;
   }
   .about-text {
-    width: 80%;
+    width: 90%;
   }
   .about-image {
-    width: 60%;
+    width: 90%;
   }
   .about-footer {
     padding: 15px;
@@ -164,12 +164,6 @@
 @media (max-width: 480px) {
   .about {
     padding: 0;
-  }
-  .about-text {
-    width: 90%;
-  }
-  .about-image {
-    width: 90%;
   }
   .about-container {
     max-width: 700px;
