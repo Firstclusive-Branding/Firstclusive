@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/Slogan.css";
+// import batmanBanner from "../assets/batman-banner1.png";
 
 const Slogan = () => {
   return (
     <div className="slogan-container">
+      {/* <img src={batmanBanner} alt="batman-banner" className="batman-banner" /> */}
       <motion.h1
         className="slogan-text results"
         initial={{ x: "-50vw" }}

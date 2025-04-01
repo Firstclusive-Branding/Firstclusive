@@ -1,7 +1,6 @@
 .homepage {
   position: relative;
   width: 100vw;
-  padding-top: 12vh;
   z-index: 1;
 }
 
@@ -13,7 +12,7 @@
   right: 0;
   bottom: 0;
   background-image: url("../assets/DotBg.png");
-  opacity: 0.35;
+  opacity: 0.5;
   z-index: -1;
   pointer-events: none;
 }
@@ -135,8 +134,8 @@
     transform: skewX(10deg) skewY(-10deg);
   }
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .homepage {
-    padding-top: 8vh;
+    padding-top: 0;
   }
-}
+} */

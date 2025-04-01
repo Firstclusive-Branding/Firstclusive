@@ -2,12 +2,12 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/Homepage.css";
 
+const Branding = lazy(() => import("../components/Branding"));
 const Slogan = lazy(() => import("../components/Slogan"));
 const AdCarousel = lazy(() => import("../components/AdCarousel"));
-const Branding = lazy(() => import("../components/Branding"));
-const About = lazy(() => import("../components/About"));
-const Services = lazy(() => import("../components/Services"));
 const Gallery = lazy(() => import("../components/Gallery"));
+const Services = lazy(() => import("../components/Services"));
+const About = lazy(() => import("../components/About"));
 
 const LoadingFallback = () => (
   <div className="loader">
