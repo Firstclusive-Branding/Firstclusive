@@ -20,9 +20,11 @@
   -webkit-text-stroke: 2px #aeff07;
 }
 
-.slogan-not {
+/* .slogan-not {
   -webkit-text-stroke: 2px #b61b1b;
-}
+  color: #b61b1b;
+} */
+
 .not-excuses {
   -webkit-text-stroke: 2px #fff;
 }

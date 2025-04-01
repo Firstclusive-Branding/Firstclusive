@@ -5,7 +5,6 @@ import "../styles/Homepage.css";
 const Slogan = lazy(() => import("../components/Slogan"));
 const AdCarousel = lazy(() => import("../components/AdCarousel"));
 const Branding = lazy(() => import("../components/Branding"));
-// const Hero = lazy(() => import("../components/Hero"));
 const About = lazy(() => import("../components/About"));
 const Services = lazy(() => import("../components/Services"));
 const Gallery = lazy(() => import("../components/Gallery"));
@@ -25,26 +24,16 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <Suspense fallback={<LoadingFallback />}>
-        <AdCarousel />
-      </Suspense>
       <div className="middleComponents">
         <Suspense fallback={<LoadingFallback />}>
           <Branding />
         </Suspense>
         <Suspense fallback={<LoadingFallback />}>
-          {/* <motion.section
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="heroApp">
-              <Hero />
-            </div>
-          </motion.section> */}
           <Slogan />
         </Suspense>
-
+        <Suspense fallback={<LoadingFallback />}>
+          <AdCarousel />
+        </Suspense>
         <Suspense fallback={<LoadingFallback />}>
           <div className="galleryApp">
             <Gallery />

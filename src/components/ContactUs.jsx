@@ -6,6 +6,7 @@ import EmailUs from "../assets/ContactUs/EmailUs.png";
 import CallUs from "../assets/ContactUs/CallUs.png";
 import VisitUs from "../assets/ContactUs/VisitUs.png";
 import { motion } from "framer-motion";
+import ButtonAnimation from "./ButtonAnimation";
 
 const ContactUs = () => {
   const onSubmit = async (event) => {
@@ -206,20 +207,14 @@ const ContactUs = () => {
                 ))}
               </div>
             </div>
-
             <textarea
               placeholder="Enter Your Message"
               name="message"
               required
             ></textarea>
-            <button type="submit" className="contact-submit">
-              <span className="contact-submit-text">
-                <span>
-                  SUBMIT <i className="bi bi-telephone-outbound-fill"></i>
-                </span>
-                <span className="contact-bubble-effect"></span>
-              </span>
-            </button>
+            <span className="contact-submit-button">
+              <ButtonAnimation text="SUBMIT" isSubmit={true} type="submit" />
+            </span>
           </form>
         </motion.div>
       </div>

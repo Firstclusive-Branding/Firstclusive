@@ -6,7 +6,7 @@
 }
 
 .about-container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -77,13 +77,12 @@
 }
 
 .counter-item {
-  width: 220px;
   text-align: center;
   justify-items: center;
 }
 .counter-item svg {
-  width: 100px;
-  height: 100px;
+  width: 65px;
+  height: 65px;
   stroke: #afe507;
   stroke-width: 10;
   fill: none;

@@ -12,7 +12,8 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter, FaHeart } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
-// import { TbDeviceLandlinePhone } from "react-icons/tb";
+import FBLogo3A from "../assets/FBLogo3A.svg";
+import FBLogo3 from "../assets/FBLogo3.svg";
 
 const Footer = () => {
   return (
@@ -21,40 +22,42 @@ const Footer = () => {
         <div className="footerLogoContainer">
           <div className="footerLogo footerLogoMobile">
             <Link to="/">
-              <img src="FBLogo3A.png" alt="Firstclusive Logo" />
+              <img src={FBLogo3A} alt="Firstclusive Logo" />
             </Link>
           </div>
           <div className="footerLogo footerLogoDesktop">
             <Link to="/">
-              <img src="FBLogo3.png" alt="Firstclusive Logo" />
+              <img src={FBLogo3} alt="Firstclusive Logo" />
             </Link>
           </div>
         </div>
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>
-            <FaPhoneAlt className="footer-contact-icon" />
-            <a href="tel:18002087788"> 1 800-208-7788</a>
-          </p>
-          <p>
-            <IoLogoWhatsapp className="footer-contact-icon" />
-            <a href="tel:+919966470788"> +91 996-647-0788</a>
-          </p>
-          <p>
-            <FaEnvelope className="footer-contact-icon" />
-            <a href="mailto:hey@firstclusive.com">hey@firstclusive.com</a>
-          </p>
-          <p>
-            <FaMapMarkerAlt className="footer-contact-icon" />
-            <a
-              href="https://maps.app.goo.gl/8SEVMAvRyTK85bfN9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Mehdipatnam, Hyderabad
-            </a>
-          </p>
+          <div className="footer-contact-content">
+            <p>
+              <FaPhoneAlt className="footer-contact-icon" />
+              <a href="tel:18002087788"> 1 800-208-7788</a>
+            </p>
+            <p>
+              <IoLogoWhatsapp className="footer-contact-icon" />
+              <a href="tel:+919966470788"> +91 996-647-0788</a>
+            </p>
+            <p>
+              <FaEnvelope className="footer-contact-icon" />
+              <a href="mailto:hey@firstclusive.com">hey@firstclusive.com</a>
+            </p>
+            <p>
+              <FaMapMarkerAlt className="footer-contact-icon" />
+              <a
+                href="https://maps.app.goo.gl/8SEVMAvRyTK85bfN9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Mehdipatnam, Hyderabad
+              </a>
+            </p>
+          </div>
         </div>
 
         <div className="footer-social">

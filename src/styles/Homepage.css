@@ -3,7 +3,19 @@
   width: 100vw;
   padding-top: 12vh;
   z-index: 1;
-  background: url("../assets/DotBg.png");
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/DotBg.png");
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .middleComponents {
@@ -121,5 +133,10 @@
 
   71% {
     transform: skewX(10deg) skewY(-10deg);
+  }
+}
+@media (max-width: 480px) {
+  .homepage {
+    padding-top: 8vh;
   }
 }

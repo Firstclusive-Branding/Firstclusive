@@ -10,7 +10,7 @@
   z-index: 9999;
 }
 .logoDesktop img {
-  height: 70px;
+  height: 50px;
 }
 .nav-links {
   display: flex;
@@ -73,12 +73,26 @@
   background: #afe507;
   color: black;
 }
-.getintouch span i {
-  margin: 0 10px;
+
+.getintouch-icon {
+  color: #fff;
   background-color: #afe507;
+  margin-left: 10px;
+  padding: 6px;
   border-radius: 50%;
-  transition: all 0.8s;
-  padding: 10px;
+  display: inline-flex;
+  transition: background-color 0.8s;
+}
+
+.getintouch:hover .getintouch-icon {
+  background-color: #fff;
+}
+.getintouch-icon svg {
+  transition: color 0.8s;
+}
+
+.getintouch:hover .getintouch-icon svg {
+  color: #0e0e0e;
 }
 .getintouch {
   position: relative;
@@ -87,7 +101,7 @@
   justify-content: center;
   align-items: center;
   margin: 15px;
-  padding: 15px 30px;
+  padding: 7px 30px;
   text-align: center;
   font-weight: bold;
   font-size: 15px;
@@ -116,14 +130,16 @@
 .getintouch:hover a {
   color: #0e0e0e;
 }
-.getintouch:hover i {
-  color: #fff;
-  background-color: #0e0e0e;
-}
 
 .getintouchLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+  color: inherit;
+  gap: 10px;
 }
+
 .bubbleEffect {
   position: absolute;
   width: 0;
@@ -144,33 +160,37 @@
 }
 
 .hamburger {
-  display: none;
-  font-size: 2rem;
-  margin: 0 1rem;
-  color: #afe507;
-  cursor: pointer;
+  display: none !important;
 }
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #afe507 !important;
+}
+
+.nav-links.active .hamburger svg {
+  transform: rotate(90deg);
+}
+
 .logoMobile {
   display: none;
-  padding: 10px;
 }
 .logoMobile img {
-  height: 50px;
-}
-.bi-chevron-right {
-  display: none;
+  height: 60px;
 }
 
 @media (max-width: 1024px) {
   .navbar {
     justify-content: space-between;
   }
-  .getintouch {
+  .get-in-touch-button {
     display: none;
   }
 
   .hamburger {
-    display: block;
+    display: block !important;
+    z-index: 9999;
   }
 
   .nav-links {
@@ -187,7 +207,7 @@
     z-index: 2;
   }
   .nav-links.active {
-    top: 70%;
+    top: 100%;
     transform: translateY(0);
   }
   .nav-item {
@@ -196,12 +216,6 @@
   }
   .nav-links li {
     padding: 0 1rem;
-  }
-  .bi-chevron-down {
-    display: none;
-  }
-  .bi-chevron-right {
-    display: inline;
   }
   .nav-item .nav-dropdown {
     display: none;
@@ -228,24 +242,18 @@
     align-items: center;
     width: 100%;
   }
-
-  .bi-chevron-right {
-    transition: transform 0.3s ease;
-  }
-
-  .nav-item.open .bi-chevron-right {
-    transform: rotate(90deg);
-  }
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
   .logoDesktop {
     display: none;
   }
   .logoMobile {
     display: inline;
-  }
-  .navbar {
-    padding-bottom: 0;
   }
 }

@@ -16,6 +16,7 @@ import UIUX from "../assets/AboutUsAssets/UIUX.png";
 import WebDevelopment from "../assets/AboutUsAssets/Web Development.png";
 import DigitalMarketing from "../assets/AboutUsAssets/Digital Marketing.jpg";
 import Printing from "../assets/AboutUsAssets/Printing.jpg";
+import ButtonAnimation from "./ButtonAnimation";
 
 const services = [
   {
@@ -70,8 +71,14 @@ const AboutUs = () => {
           </div>
           <div className="aboutUs-hero-content">
             <h1>Results, Not Excuses – Building brands that make an impact.</h1>
-            <ScrollLink to="company-section" smooth={true} duration={800}>
-              <button className="know-more-btn">Know More</button>
+            <ScrollLink to="company-section" smooth={true} duration={500}>
+              <span className="about-us-know-more">
+                <ButtonAnimation
+                  text="Know More"
+                  isSubmit={true}
+                  icon={false}
+                />
+              </span>
             </ScrollLink>
           </div>
         </motion.section>

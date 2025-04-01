@@ -257,73 +257,9 @@
   transform: scale(1.02);
 }
 
-.contact-submit span i {
-  margin: 0 10px;
-  background-color: #afe507;
-  border-radius: 50%;
-  transition: all 0.8s;
-  padding: 10px;
-}
-.contact-submit {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-  padding: 15px 50px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: #fff;
-  background: transparent;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  box-shadow: inset 0 0 0 0 #afe507;
-  overflow: hidden;
-  transition: border ease 0.5s;
-  z-index: 5;
-}
-.contact-submit .contact-submit-text {
-  color: #fff;
-  transition: color ease-out 0.5s;
-  text-decoration: none;
-}
-.contact-submit:active {
-  transform: scale(0.9);
-}
-.contact-submit:hover {
-  border: 2px solid #afe507;
-  color: #0e0e0e;
-}
-.contact-submit:hover .contact-submit-text {
-  color: #afe507;
-  filter: drop-shadow(0px 0px 5px #0e0e0e);
-}
-.contact-submit:hover i {
-  color: #afe507;
-  background-color: #0e0e0e;
-}
-
-.contact-bubble-effect {
-  position: absolute;
-  width: 0;
-  height: 0;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: all 0.5s ease-in-out;
-  z-index: -5;
-  bottom: -100%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.contact-submit:hover .contact-bubble-effect {
-  height: 400px;
-  width: 300px;
-  transform: translate(-50%, 50%);
+.contact-submit-button {
+  width: 40%;
+  margin: auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -347,6 +283,9 @@
   }
   .contact-checkbox-options {
     font-size: 14px;
+  }
+  .contact-submit-button {
+    width: 60%;
   }
 }
 
@@ -392,6 +331,10 @@
     width: 70%;
     margin: 20px auto;
   }
+
+  .contact-submit-button {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 480px) {
   .contact-moto h1 {
@@ -423,6 +366,10 @@
   .contact-submit i {
     font-size: 12px;
     padding: 4px;
+  }
+
+  .contact-submit-button {
+    width: 55%;
   }
 }
 

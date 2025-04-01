@@ -13,14 +13,17 @@ const About = () => {
   const duration = 1000;
   const steps = 100;
   const intervalTime = duration / steps;
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     let observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        if (entry.isIntersecting) {
-          let startTime = Date.now();
+        // if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
 
+          let startTime = Date.now();
           let interval = setInterval(() => {
             let elapsedTime = Date.now() - startTime;
             let progress = Math.min(elapsedTime / duration, 1);
@@ -44,7 +47,7 @@ const About = () => {
 
     if (counterRef.current) observer.observe(counterRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <section id="about-us" className="about">
