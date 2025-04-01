@@ -25,12 +25,12 @@ const OurLocation = () => {
 
         <div className="map-container">
           {!mapLoaded && (
-            <div className="map-loader">
-              <div className="spinner"></div>
-              <p>Loading map...</p>
+            <div class="loader">
+              <div data-glitch="Loading..." class="glitch">
+                Loading...
+              </div>
             </div>
           )}
-
           <iframe
             title="Our Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.646203124297!2d78.4426423!3d17.3948971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972744dfd3d5%3A0x7b3b13733f4501d7!2sFirstclusive%20Branding!5e0!3m2!1sen!2sin!4v1708789012345!5m2!1sen!2sin"
