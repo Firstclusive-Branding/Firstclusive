@@ -65,8 +65,8 @@
 }
 @media (max-width: 1024px) {
   .service-card {
-    width: 120px;
-    height: 380px;
+    width: 160px;
+    height: 400px;
   }
 
   .service-text {
@@ -81,7 +81,7 @@
   }
 
   .service-card {
-    height: 100px;
+    height: 120px;
     width: 90%;
   }
 
@@ -99,3 +99,10 @@
     height: 100%;
   }
 }
+/* 
+@media (max-width: 480px) {
+  .service-card {
+    height: 100px;
+    width: 90%;
+  }
+} */

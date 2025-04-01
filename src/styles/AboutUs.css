@@ -203,14 +203,21 @@
   max-width: 900px;
   margin: auto;
 }
-
+.what-set-us-apart-section li {
+  max-width: 1200px;
+}
+.what-set-us-apart-section li strong {
+  color: #afe507;
+}
 .what-set-us-apart-list {
   text-align: left;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 0;
 }
-
+.what-set-us-apart-content {
+  max-width: 1200px;
+}
 .what-set-us-apart-list li {
   font-size: 1.2rem;
   color: #b0b0b0;
@@ -334,9 +341,11 @@
   text-align: left;
   font-size: 1.1rem;
   color: #d9d9d9;
-  line-height: 1.5;
+  line-height: 2;
 }
-
+.profile-card p strong {
+  color: #afe507;
+}
 @media (max-width: 1024px) {
   .aboutUs-header {
     width: 600px;
@@ -533,12 +542,12 @@
     font-size: 1.4rem;
   }
 
-  .company-section,
-  .services-section {
+  .company-section {
     width: 90%;
     margin: 0 auto;
     padding: 0;
   }
+
   .company-section p,
   .services-section p,
   .what-set-us-apart-container li,
@@ -554,9 +563,17 @@
   .what-set-us-apart-list {
     width: 80%;
   }
+
+  .services-section {
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+
   .services-grid {
-    max-width: 300px;
-    max-height: 250px;
+    max-width: 380px;
+    max-height: 330px;
     font-size: 12px;
   }
   .service-title-au {
@@ -567,12 +584,12 @@
   .service-web-dev .service-title-au {
     transform: rotate(-90deg);
     left: -80%;
-    bottom: 40%;
+    bottom: 45%;
     width: 200%;
   }
   .profile-section {
-    margin-top: 3rem;
     width: 100%;
+    padding-top: 30px;
   }
   .profile-section h2 {
     margin: 2rem 0;

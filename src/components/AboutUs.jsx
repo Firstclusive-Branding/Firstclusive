@@ -71,7 +71,7 @@ const AboutUs = () => {
           </div>
           <div className="aboutUs-hero-content">
             <h1>Results, Not Excuses – Building brands that make an impact.</h1>
-            <ScrollLink to="company-section" smooth={true} duration={500}>
+            <ScrollLink to="company-section" smooth={true} duration={100}>
               <span className="about-us-know-more">
                 <ButtonAnimation
                   text="Know More"
@@ -269,7 +269,7 @@ const AboutUs = () => {
             <p>
               An entrepreneur, branding expert, and aeronautical engineer,
               Jamsheed Junaidy founded
-              <strong>Firstclusive Branding</strong> in 2014, helping{" "}
+              <strong> Firstclusive Branding</strong> in 2014, helping{" "}
               <strong>800+ clients</strong> build strong brand identities. With
               a background in{" "}
               <strong>Aeronautical Engineering (MLR Institute)</strong> and
@@ -285,13 +285,15 @@ const AboutUs = () => {
             <h3>Dr. Khizer Hussain Junaidy</h3>
             <h4>Director</h4>
             <p>
-              A dedicated medical professional and healthcare advocate, Dr.
-              Khizer brings his expertise in medicine and leadership to
-              Firstclusive. With an MBBS & MD in Pharmacology from Gandhi
-              Medical College, he is committed to healthcare innovation, medical
-              education, and impactful branding solutions. His vision for
-              healthcare branding ensures that Firstclusive delivers meaningful
-              change in the industry.
+              A dedicated <strong>medical professional</strong> and{" "}
+              <strong>healthcare advocate</strong>, Dr. Khizer brings his{" "}
+              <strong>expertise</strong> in medicine and leadership to
+              Firstclusive. With an MBBS & <strong>MD in Pharmacology</strong>{" "}
+              from Gandhi Medical College, he is committed to{" "}
+              <strong>healthcare innovation</strong>, medical education, and
+              impactful <strong>branding solutions</strong>. His vision for
+              healthcare branding ensures that Firstclusive delivers{" "}
+              <strong>meaningful change</strong> in the industry.
             </p>
           </div>
         </div>
