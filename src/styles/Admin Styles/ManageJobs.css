@@ -1,0 +1,233 @@
+.manage-jobs-container {
+  padding: 20px;
+  color: #0e0e0e;
+}
+
+.manage-jobs-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.manage-jobs-search {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.manage-jobs-search:focus {
+  border-color: #aef507;
+  outline: none;
+}
+
+.manage-jobs-add-btn {
+  background-color: #aef507;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.manage-jobs-add-btn:hover {
+  background-color: #c8ff38;
+  transform: translateY(-1px);
+}
+
+.manage-jobs-body {
+  display: flex;
+  gap: 20px;
+}
+
+.manage-jobs-left {
+  width: 30%;
+  background-color: #f1f6cc;
+  padding: 16px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+  border: 1px solid #d9e0aa;
+}
+
+.job-item {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.job-item:hover {
+  background-color: #eeffbc;
+}
+
+.active-job {
+  background-color: #dffb90;
+  border: 1px solid #bde73b;
+}
+
+.job-title {
+  margin: 0 0 6px 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.job-description {
+  font-size: 13px;
+  color: #555;
+}
+
+.manage-jobs-right {
+  width: 70%;
+  background-color: #f5fadc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.job-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.job-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.edit-btn {
+  color: #aef507;
+}
+
+.edit-btn:hover {
+  color: #d4ff45;
+}
+
+.delete-btn {
+  color: #ff4d4d;
+}
+
+.delete-btn:hover {
+  color: #ff1a1a;
+}
+
+.manage-jobs-right p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.manage-jobs-right ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.manage-jobs-right li {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Modal Styles */
+
+.job-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.job-modal-content {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(174, 245, 7, 0.2);
+}
+
+.job-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #aef507;
+  cursor: pointer;
+}
+
+.job-modal-title {
+  color: #aef507;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.job-modal-form input,
+.job-modal-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.job-modal-form input:focus,
+.job-modal-form textarea:focus {
+  border-color: #aef507;
+  outline: none;
+}
+
+.job-modal-form textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+.job-modal-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #aef507;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job-modal-submit:hover {
+  background-color: #c8ff38;
+}

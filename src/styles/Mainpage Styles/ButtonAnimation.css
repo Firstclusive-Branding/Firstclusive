@@ -1,0 +1,154 @@
+.universal-button-icon {
+  color: #fff;
+  background-color: #afe507;
+  margin-left: 10px;
+  padding: 6px;
+  border-radius: 50%;
+  display: inline-flex;
+  transition: background-color 0.8s;
+  cursor: url("/Cursors/CursorPointer.cur"), pointer;
+}
+
+.universal-button:hover .universal-button-icon {
+  background-color: #fff;
+}
+.universal-button-icon svg {
+  transition: color 0.8s;
+}
+.universal-button:hover .universal-button-icon svg {
+  color: #0e0e0e;
+}
+
+.universal-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 7px 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #afe507;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 0 #afe507;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.universal-button a {
+  color: #fff;
+  transition: color ease-out 0.5s;
+  text-decoration: none;
+}
+
+.universal-button:active {
+  transform: scale(0.9);
+}
+
+.universal-button:hover {
+  border: 2px solid #fff;
+  color: #0e0e0e;
+}
+
+.universal-button:hover a {
+  color: #0e0e0e;
+}
+
+.universal-button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 10px;
+  /* cursor: url("CursorPointer.cur") !important; */
+}
+
+.universal-bubble-effect {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #afe507;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: -5;
+  bottom: -100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.universal-button:hover .universal-bubble-effect {
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, 50%);
+}
+
+.universal-button-link {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 10px;
+  /* cursor: pointer; */
+  cursor: url("CursorPointer.cur") !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .universal-button {
+    padding: 6px 25px;
+    font-size: 14px;
+  }
+
+  .universal-button-icon {
+    padding: 5px;
+    margin-left: 8px;
+  }
+
+  .universal-button:hover .universal-bubble-effect {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .universal-button {
+    padding: 5px 20px;
+    font-size: 13px;
+  }
+
+  .universal-button-icon {
+    padding: 4px;
+    margin-left: 6px;
+  }
+
+  .universal-button:hover .universal-bubble-effect {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .universal-button {
+    padding: 5px 16px;
+    font-size: 12px;
+    width: 100%; /* optional: make it full width */
+  }
+
+  .universal-button-icon {
+    padding: 3px;
+    margin-left: 5px;
+  }
+
+  .universal-button:hover .universal-bubble-effect {
+    width: 180px;
+    height: 250px;
+  }
+}

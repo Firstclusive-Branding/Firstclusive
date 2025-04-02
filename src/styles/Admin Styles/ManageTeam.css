@@ -1,0 +1,182 @@
+.manage-team-container {
+  padding: 20px;
+  border-radius: 10px;
+  color: #0e0e0e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.manage-team-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.manage-team-search {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.manage-team-search:focus {
+  border-color: #aef507;
+  outline: none;
+}
+
+.manage-team-add-btn {
+  background-color: #aef507;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.manage-team-add-btn:hover {
+  background-color: #c8ff38;
+  transform: translateY(-1px);
+}
+
+.manage-team-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.manage-team-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.manage-team-table th,
+.manage-team-table td {
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+}
+
+.manage-team-table th {
+  background-color: #e5ff95;
+  color: #333;
+  font-weight: 600;
+}
+
+.manage-team-table tr:hover {
+  background-color: #eeffbc;
+}
+
+.manage-team-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.edit-btn {
+  color: #aef507;
+}
+
+.edit-btn:hover {
+  color: #d4ff45;
+}
+
+.delete-btn {
+  color: #ff4d4d;
+}
+
+.delete-btn:hover {
+  color: #ff1a1a;
+}
+
+/* MODAL STYLES */
+
+.team-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.team-modal-content {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(174, 245, 7, 0.2);
+}
+
+.team-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #aef507;
+  cursor: pointer;
+}
+
+.team-modal-title {
+  color: #aef507;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-modal-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.team-modal-form input:focus {
+  border-color: #aef507;
+  outline: none;
+}
+
+.team-modal-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #aef507;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.team-modal-submit:hover {
+  background-color: #c8ff38;
+}

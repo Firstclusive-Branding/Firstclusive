@@ -8,11 +8,24 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   position: relative;
+  cursor: url("./assets//Cursors Assets/CursorDefault.cur"), auto;
 }
 
-.admin-content {
-  margin-left: 5%;
-  margin-top: 5%;
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: url("./assets//Cursors Assets/CursorPointer.cur"), pointer;
+}
+
+/* Text inputs and text areas */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  cursor: url("./assets//Cursors Assets/CursorText.cur"), text;
 }
 
 @media (max-width: 1024px) {

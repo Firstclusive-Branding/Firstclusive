@@ -1,0 +1,30 @@
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303030;
+  padding: 12px 34px;
+  color: #aef507;
+  border-bottom: 1px solid #333;
+}
+
+.admin-navbar-welcome {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.admin-navbar-signout {
+  background-color: #aef507;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.admin-navbar-signout:hover {
+  background-color: #d0ff3f;
+}

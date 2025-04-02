@@ -1,0 +1,148 @@
+.careers-container {
+  background: url("../assets/DotBg.png");
+  color: #ffffff;
+  padding: 120px 20px;
+  padding-bottom: 40px;
+  min-height: 100vh;
+}
+
+.careers-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #afe507;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.careers-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+.jobs-list {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.careers-job-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.job-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #afe507;
+}
+
+.job-meta {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+.job-summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: 1px solid #afe507;
+  color: #afe507;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+.toggle-button:hover {
+  background-color: #afe507;
+  color: #0e0e0e;
+}
+
+.job-details {
+  overflow: hidden;
+  margin-top: 10px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.details-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ffffff;
+  white-space: pre-line;
+}
+
+.apply-button {
+  background-color: #afe507;
+  color: #0e0e0e;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #98c000;
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .careers-container {
+    padding: 90px 20px;
+  }
+  .careers-title {
+    font-size: 2.5rem;
+  }
+  .job-header h2 {
+    font-size: 1.5rem;
+  }
+  .toggle-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  .apply-button {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .jobs-list {
+    max-width: 100%;
+  }
+  .job-header h2 {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .job-summary,
+  .details-content p,
+  .details-content li {
+    font-size: 0.9rem;
+  }
+  .toggle-button {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+  .apply-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
