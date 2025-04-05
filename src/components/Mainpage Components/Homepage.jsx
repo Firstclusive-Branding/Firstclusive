@@ -52,6 +52,19 @@ const Homepage = () => {
 
         <Suspense fallback={<LoadingFallback />}>
           <motion.section
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="aboutApp">
+              <About />
+            </div>
+          </motion.section>
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback />}>
+          <motion.section
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
@@ -62,7 +75,7 @@ const Homepage = () => {
             </div>
           </motion.section>
         </Suspense>
-
+        {/* 
         <Suspense fallback={<LoadingFallback />}>
           <motion.section
             initial={{ opacity: 0, y: 100 }}
@@ -74,7 +87,7 @@ const Homepage = () => {
               <About />
             </div>
           </motion.section>
-        </Suspense>
+        </Suspense> */}
       </div>
     </div>
   );

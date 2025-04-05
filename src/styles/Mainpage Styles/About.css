@@ -6,9 +6,17 @@
 }
 
 .about-container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.about-us-headings {
+  text-align: left;
+}
+.about-us-headings p {
+  display: flex;
+  align-items: center;
 }
 
 .section-title {
@@ -44,35 +52,27 @@
 
 .about-image {
   flex: 1;
+  border-radius: 10px;
   overflow: hidden;
 }
 .about-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   object-fit: cover;
   transition: transform 0.5s ease-in-out;
 }
 .about-image img:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .about-footer {
   padding: 30px;
-  text-align: center;
+  text-align: left;
   margin-top: 50px;
 }
-
-.about-footer h3 {
-  font-size: 2.5rem;
-  color: #afe507;
-  margin-bottom: 30px;
-}
-
 .counter-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 8rem;
   margin-top: 30px;
 }
 
@@ -80,11 +80,12 @@
   text-align: center;
   justify-items: center;
 }
+
 .counter-item svg {
   width: 65px;
   height: 65px;
   stroke: #afe507;
-  stroke-width: 10;
+  stroke-width: 20;
   fill: none;
 }
 .counter-item h2 {

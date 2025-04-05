@@ -3,8 +3,9 @@ import "../../styles/Mainpage Styles/About.css";
 import { IoBriefcaseSharp, IoLayersSharp } from "react-icons/io5";
 import { FaCogs } from "react-icons/fa";
 import { FaFaceSmileBeam } from "react-icons/fa6";
-import aboutUs from "../../assets/AboutUsAssets/about-us.jpg";
+import aboutUs from "../../assets/AboutUsAssets/about-us2.jpg";
 import { motion } from "framer-motion";
+import { GoDotFill } from "react-icons/go";
 
 const About = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0]);
@@ -19,7 +20,6 @@ const About = () => {
     let observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        // if (entry.isIntersecting) {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
 
@@ -52,8 +52,13 @@ const About = () => {
   return (
     <section id="about-us" className="about">
       <div className="about-container">
-        <h2 className="section-title">About Us</h2>
-
+        {/* <h2 className="section-title">About Us</h2> */}
+        <div className="about-us-headings">
+          <p>
+            <GoDotFill /> About Us
+          </p>
+          <h1>Your Brand’s Growth Starts Here</h1>
+        </div>
         <div className="about-content">
           <article className="about-text">
             <p>
@@ -87,7 +92,12 @@ const About = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h3>Why Choose Firstclusive?</h3>
+          <div className="about-us-headings">
+            <p>
+              <GoDotFill /> Why choose Firstclusive?
+            </p>
+            <h1>Results That Speak for Themselves</h1>
+          </div>
           <div className="counter-container">
             <div className="counter-item">
               <IoBriefcaseSharp />
