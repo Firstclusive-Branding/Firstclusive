@@ -29,7 +29,7 @@ const AdCarousel = () => {
   return (
     <div className="carousel-container">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectCreative]}
+        modules={[Pagination, Autoplay, EffectCreative]}
         lazy="true"
         effect={"creative"}
         creativeEffect={{
@@ -45,7 +45,7 @@ const AdCarousel = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        navigation={true}
+        // navigation={true}
         pagination={{ clickable: true }}
         className="ad-swiper"
       >
