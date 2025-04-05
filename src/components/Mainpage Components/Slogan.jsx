@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Slogan.css";
-// import batmanBanner from "../../assets/batman-banner1.png";
 
 const Slogan = () => {
   return (
     <div className="slogan-container">
-      {/* <img src={batmanBanner} alt="batman-banner" className="batman-banner" /> */}
+      <span className="circle-gradient-background"></span>
+      <span className="circle-gradient-background"></span>
       <motion.h1
         className="slogan-text results"
         initial={{ x: "-50vw" }}
@@ -24,8 +24,7 @@ const Slogan = () => {
         transition={{ type: "spring" }}
         viewport={{ once: true }}
       >
-        <span className="slogan-not">NOT </span>
-        EXCUSES
+        NOT EXCUSES
       </motion.h1>
     </div>
   );

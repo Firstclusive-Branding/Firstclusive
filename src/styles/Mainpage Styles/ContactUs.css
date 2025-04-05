@@ -7,9 +7,9 @@
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  background: url("../../assets/DotBg.png");
 }
 .contact-moto {
-  background: url("../assets/DotBg.png") no-repeat center center/cover;
   padding: 20px;
   min-height: 80vh;
   width: 100%;
@@ -100,7 +100,7 @@
   display: flex;
   width: 100%;
   min-height: 600px;
-  background: url("../assets/DotBg.png") no-repeat center center/cover;
+  background: url("../../assets/DotBg.png") no-repeat center center/cover;
 }
 
 .contact-left {
@@ -121,6 +121,7 @@
 .contact-right {
   width: 50%;
   display: flex;
+  background-color: #1a1a1a;
 }
 
 .contact-form {

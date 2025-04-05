@@ -5,10 +5,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   z-index: 9999;
+  transition: background-color 0.5s ease-in-out;
 }
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .logoDesktop img {
   height: 50px;
 }
@@ -17,6 +22,8 @@
   gap: 4rem;
   list-style: none;
   font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .nav-links li a {
@@ -67,6 +74,7 @@
   color: white;
   text-decoration: none;
   transition: all 0.3s;
+  text-transform: capitalize;
 }
 
 .nav-dropdown li a:hover {

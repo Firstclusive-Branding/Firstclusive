@@ -8,7 +8,7 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   position: relative;
-  cursor: url("./assets//Cursors Assets/CursorDefault.cur"), auto;
+  cursor: url("./assets//Cursors Assets/CursorDefault.cur"), auto !important;
 }
 
 a,
@@ -16,16 +16,15 @@ button,
 [role="button"],
 input[type="submit"],
 input[type="button"] {
-  cursor: url("./assets//Cursors Assets/CursorPointer.cur"), pointer;
+  cursor: url("./assets//Cursors Assets/CursorPointer.cur"), pointer !important;
 }
 
-/* Text inputs and text areas */
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
 textarea {
-  cursor: url("./assets//Cursors Assets/CursorText.cur"), text;
+  cursor: url("./assets//Cursors Assets/CursorText.cur"), text !important;
 }
 
 @media (max-width: 1024px) {

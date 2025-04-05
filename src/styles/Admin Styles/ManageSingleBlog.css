@@ -1,0 +1,50 @@
+.single-blog-wrapper {
+  padding: 40px;
+  color: #0e0e0e;
+  background: none;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.single-blog-wrapper h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0e0e0e;
+}
+
+.single-blog-wrapper p {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+.single-blog-wrapper strong {
+  color: #0e0e0e;
+}
+
+.single-blog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 30px 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.single-blog-back-button {
+  background-color: transparent;
+  border: 1px solid #0e0e0e;
+  color: #0e0e0e;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.single-blog-back-button:hover {
+  background-color: #0e0e0e;
+  color: #ffffff;
+}

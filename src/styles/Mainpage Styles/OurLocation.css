@@ -1,7 +1,7 @@
 .location-container {
   display: flex;
   flex-direction: column;
-  background: url("../assets/DotBg.png");
+  background: url("../../assets/DotBg.png");
   justify-content: center;
   align-items: center;
   padding: 80px 20px;

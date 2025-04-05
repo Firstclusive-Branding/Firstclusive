@@ -14,6 +14,7 @@ const Navbar = () => {
   const navRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
@@ -34,6 +35,19 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 0.25;
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleHomeClick = (e) => {
     e.preventDefault();
     if (location.pathname !== "/") {
@@ -51,7 +65,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar" ref={navRef}>
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={navRef}>
       <div className="logo logoDesktop">
         <Link to="/" onClick={handleHomeClick}>
           <img src={FBLogo3A} alt="Firstclusive Logo" />

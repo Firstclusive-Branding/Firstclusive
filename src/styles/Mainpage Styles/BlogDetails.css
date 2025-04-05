@@ -1,3 +1,7 @@
+.blog-details-section {
+  background-image: url("../../assets/DotBg.png");
+}
+
 .main-blog-heading {
   font-size: 3rem;
   text-align: center;
@@ -17,6 +21,7 @@
   border-left: 2px solid #aef507;
   border-right: 2px solid #aef507;
   color: #e0e0e0;
+  background-color: #121313;
 }
 
 .blog-details-meta-title {

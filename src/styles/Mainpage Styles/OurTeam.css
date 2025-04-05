@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: url("../assets/DotBg.png");
+  background: url("../../assets/DotBg.png");
 }
 
 .team-heading {

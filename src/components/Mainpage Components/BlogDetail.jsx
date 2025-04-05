@@ -16,6 +16,7 @@ const BlogDetails = () => {
       initial={{ opacity: 0, y: 20 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
+      className="blog-details-section"
     >
       <h1 className="main-blog-heading">{blog.title}</h1>
 

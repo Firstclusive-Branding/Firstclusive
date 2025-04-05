@@ -28,7 +28,7 @@ const FloatingIcons = () => {
           cursor: "url('/Cursors/CursorPointer.cur'), pointer",
         }}
       >
-        <FaWhatsapp size={40} />
+        <FaWhatsapp size={35} />
       </a>
 
       <a
@@ -38,7 +38,7 @@ const FloatingIcons = () => {
           cursor: "url('/Cursors/CursorPointer.cur'), pointer",
         }}
       >
-        <FaPhoneAlt size={30} />
+        <FaPhoneAlt size={25} />
       </a>
     </motion.div>
   );

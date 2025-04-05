@@ -12,6 +12,7 @@ import {
   MdSettings,
 } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
+import { FaBlogger } from "react-icons/fa";
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
@@ -25,20 +26,20 @@ const AdminSidebar = () => {
         <li onClick={() => navigate("/admin/dashboard")}>
           <MdDashboard className="admin-sidebar-icon" /> Dashboard
         </li>
-        <li>
+        {/* <li>
           <MdPeople className="admin-sidebar-icon" /> Users
-        </li>
+        </li> */}
         <li onClick={() => navigate("/admin/manage-jobs")}>
           <MdWork className="admin-sidebar-icon" /> Jobs
         </li>{" "}
         <li onClick={() => navigate("/admin/manage-team")}>
           <IoIosPeople className="admin-sidebar-icon" /> Team
         </li>
-        <li>
+        {/* <li>
           <MdAssignment className="admin-sidebar-icon" /> Applications
-        </li>
-        <li>
-          <MdSettings className="admin-sidebar-icon" /> Settings
+        </li> */}
+        <li onClick={() => navigate("/admin/manage-blogs")}>
+          <FaBlogger className="admin-sidebar-icon" /> Blogs
         </li>
       </ul>
     </aside>

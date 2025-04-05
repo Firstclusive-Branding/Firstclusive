@@ -29,11 +29,11 @@ const CustomCursor = () => {
         backgroundColor: "#aef507",
         borderRadius: "50%",
         pointerEvents: "none",
-        zIndex: 9999,
+        zIndex: 99999,
         translateX: smoothX,
         translateY: smoothY,
         boxShadow: "0 0 12px #aef507, 0 0 24px #aef50788",
-        mixBlendMode: "difference",
+        mixBlendMode: "exclusion",
       }}
     />
   );

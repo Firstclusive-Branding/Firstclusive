@@ -1,7 +1,22 @@
+.admin-layout * {
+  cursor: auto !important;
+}
+
 .admin-layout {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  cursor: auto !important;
+}
+
+.admin-layout a,
+.admin-layout button {
+  cursor: pointer !important;
+}
+
+.admin-layout input,
+.admin-layout textarea {
+  cursor: text !important;
 }
 
 .admin-main {

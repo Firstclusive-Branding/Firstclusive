@@ -1,15 +1,41 @@
+.services-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1500px;
+  padding: 2rem;
+}
+
+.services-header-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: #0e0e0e;
+}
+
+.services-header-container p {
+  display: flex;
+  align-items: center;
+}
+
 .services-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  width: 100%;
   background-color: #0e0e0e;
 }
 
 .service-card {
   position: relative;
   text-decoration: none;
-  width: 250px;
+  width: 300px;
   height: 650px;
   display: flex;
   justify-content: center;

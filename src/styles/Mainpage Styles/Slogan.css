@@ -1,24 +1,34 @@
-/* Slogan.css */
 .slogan-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 80px;
-  /* margin-top: 150px; */
+  padding: 80px;
+  background-image: linear-gradient(to bottom, #0e0e0e, #0a141f, #0e0e0e);
   background-color: #0e0e0e;
+  position: relative;
+}
+.circle-gradient-background {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #aef507 0%, #0e0e0e 60%);
 }
 
-/* .batman-banner {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 0;
-  opacity: 0.9;
-  z-index: 2;
-} */
+.circle-gradient-background:nth-child(1) {
+  top: 25%;
+  left: 10%;
+}
+
+.circle-gradient-background:nth-child(2) {
+  bottom: 25%;
+  right: 10%;
+}
 
 .slogan-text {
   font-size: 8vw;
@@ -45,8 +55,7 @@
 
 @media (max-width: 1024px) {
   .slogan-container {
-    height: 30vh;
-    padding-top: 30px;
+    padding: 30px 0;
   }
   .slogan-text {
     font-size: 9vw;
@@ -56,17 +65,13 @@
 
 @media (max-width: 768px) {
   .slogan-text {
-    font-size: 10vw;
+    font-size: 9vw;
   }
 }
 
 @media (max-width: 480px) {
-  .slogan-container {
-    height: auto;
-    margin: 5% auto;
-  }
   .slogan-text {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 

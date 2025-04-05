@@ -7,6 +7,31 @@
   padding: 20px;
 }
 
+.admin-home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #aef507;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-home-button:hover {
+  background-color: #d0ff3f;
+}
+
+.admin-home-button a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .admin-login-form {
   background-color: #1e1e1e;
   padding: 40px;
