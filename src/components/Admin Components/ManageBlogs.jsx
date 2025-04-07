@@ -8,7 +8,11 @@ import { TbEdit } from "react-icons/tb";
 import "react-toastify/dist/ReactToastify.css";
 import { FaPlus, FaRightLong, FaLeftLong } from "react-icons/fa6";
 import Swal from "sweetalert2";
-import { LexicalEditor } from "./LexicalEditor";
+
+import { TiptapEditor } from "./TiptapEditor";
+
+// import { LexicalEditor } from "./LexicalEditor";
+// import { DraftEditor } from "./DraftEditor";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
@@ -238,7 +242,6 @@ const ManageBlogs = () => {
         )}
       </div>
 
-      {/* Pagination */}
       <div className="manage-blog-pagination">
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
@@ -263,6 +266,13 @@ const ManageBlogs = () => {
       {showModal && (
         <div className="manage-blog-modal">
           <div className="manage-blog-modal-content">
+            <span
+              className="modal-close-cross"
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </span>
+
             <h2>{editMode ? "Edit Blog" : "Create Blog"}</h2>
 
             <label>Title</label>
@@ -296,11 +306,34 @@ const ManageBlogs = () => {
             />
 
             <label>Content</label>
-            <LexicalEditor
-              initialHTML={formData.content}
-              onChange={(html) =>
-                setFormData((prev) => ({ ...prev, content: html }))
+            {/* <div
+              style={{
+                height: "220px",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <TiptapEditor
+                initialHTML={formData.content}
+                onChange={(html) =>
+                  setFormData((prev) => ({ ...prev, content: html }))
+                }
+              />
+            </div> */}
+            <textarea
+              value={formData.content}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, content: e.target.value }))
               }
+              style={{
+                flex: 1,
+                resize: "none",
+                padding: "8px",
+                fontSize: "14px",
+                lineHeight: "1.5",
+                borderRadius: "4px",
+                border: "1px solid #ccc",
+              }}
             />
 
             <label>Author</label>
@@ -334,12 +367,12 @@ const ManageBlogs = () => {
               <button onClick={handleCreateOrUpdate}>
                 {editMode ? "Update" : "Create"}
               </button>
-              <button
+              {/* <button
                 onClick={() => setShowModal(false)}
                 className="cancel-btn"
               >
                 Cancel
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

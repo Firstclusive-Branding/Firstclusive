@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lexical/react": "^0.29.0",
-    "@lexical/rich-text": "^0.29.0",
+    "@tiptap/extension-link": "^2.11.7",
+    "@tiptap/extension-underline": "^2.11.7",
+    "@tiptap/react": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
     "axios": "^1.8.3",
     "bootstrap-icons": "^1.11.3",
     "cors": "^2.8.5",
@@ -20,7 +22,6 @@
     "gsap": "^3.12.7",
     "jwt-decode": "^4.0.0",
     "keen-slider": "^6.8.6",
-    "lexical": "^0.29.0",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

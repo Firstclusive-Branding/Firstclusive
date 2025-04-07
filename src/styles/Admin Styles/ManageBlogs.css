@@ -161,15 +161,16 @@
   padding: 30px;
   border-radius: 10px;
   width: 500px;
-  max-height: 90vh; /* ⬅️ Prevents overflowing screen */
-  overflow-y: auto; /* ⬅️ Enables scroll */
+  max-height: 80vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 999;
 }
 
-/* Optional scrollbar styling */
 .manage-blog-modal-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -206,6 +207,21 @@
 
 .blogs-swal-cancel {
   color: #333 !important;
+}
+
+.modal-close-cross {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer !important;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.modal-close-cross:hover {
+  color: crimson;
 }
 
 @media (max-height: 600px) {

@@ -2,7 +2,7 @@ import React from "react";
 import UFO from "../../assets/UFO.gif";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Branding.css";
-import EarthVid from "../../assets/Earth1.mp4";
+import EarthVid from "../../assets/Earth.mp4";
 
 const BrandingAnimation = () => {
   return (

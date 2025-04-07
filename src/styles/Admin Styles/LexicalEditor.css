@@ -26,6 +26,8 @@
   font-size: 14px;
   outline: none;
   position: relative;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .editor-placeholder {
