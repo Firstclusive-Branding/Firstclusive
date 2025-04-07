@@ -17,9 +17,12 @@
 .footer-social {
   max-width: 400px;
 }
-/* .footer-contact-content {
-  display: flex;
-} */
+.footer-contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: left;
+}
 
 .footer-contact h3,
 .footer-social h3 {
@@ -86,7 +89,10 @@
   .footer-container {
     padding: 0;
   }
-
+  .footer-contact-content {
+    display: flex;
+    flex-direction: column;
+  }
   .footerLogoDesktop img {
     width: 100px;
   }

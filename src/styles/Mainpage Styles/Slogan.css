@@ -66,17 +66,39 @@
 @media (max-width: 768px) {
   .slogan-text {
     font-size: 9vw;
+    margin: 1.5rem 0;
+  }
+  .circle-gradient-background {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .slogan-text {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+    margin: 1rem 0;
+  }
+
+  .circle-gradient-background {
+    filter: blur(40px);
+    width: 150px;
+    height: 150px;
+  }
+  .circle-gradient-background:nth-child(1) {
+    top: 15%;
+    left: 5%;
+  }
+
+  .circle-gradient-background:nth-child(2) {
+    top: 25%;
+    right: 5%;
   }
 }
 
 @media (max-width: 375px) {
   .slogan-text {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    margin-top: 0;
   }
 }

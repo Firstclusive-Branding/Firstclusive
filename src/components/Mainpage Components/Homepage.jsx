@@ -18,6 +18,9 @@ const Services = lazy(() =>
   import("../../components/Mainpage Components/Services")
 );
 const About = lazy(() => import("../../components/Mainpage Components/About"));
+const StatsCounter = lazy(() =>
+  import("../../components/Mainpage Components/StatsCounter")
+);
 
 const LoadingFallback = () => (
   <div className="loader">
@@ -75,19 +78,18 @@ const Homepage = () => {
             </div>
           </motion.section>
         </Suspense>
-        {/* 
         <Suspense fallback={<LoadingFallback />}>
           <motion.section
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="aboutApp">
-              <About />
+            <div className="statsApp">
+              <StatsCounter />
             </div>
           </motion.section>
-        </Suspense> */}
+        </Suspense>
       </div>
     </div>
   );

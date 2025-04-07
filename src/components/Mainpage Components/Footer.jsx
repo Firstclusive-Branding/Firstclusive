@@ -35,19 +35,19 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact Us</h3>
           <div className="footer-contact-content">
-            <p>
+            <span>
               <FaPhoneAlt className="footer-contact-icon" />
               <a href="tel:18002087788"> 1 800-208-7788</a>
-            </p>
-            <p>
+            </span>
+            <span>
               <IoLogoWhatsapp className="footer-contact-icon" />
               <a href="tel:+919966470788"> +91 996-647-0788</a>
-            </p>
-            <p>
+            </span>
+            <span>
               <FaEnvelope className="footer-contact-icon" />
               <a href="mailto:hey@firstclusive.com">hey@firstclusive.com</a>
-            </p>
-            <p>
+            </span>
+            <span>
               <FaMapMarkerAlt className="footer-contact-icon" />
               <a
                 href="https://maps.app.goo.gl/8SEVMAvRyTK85bfN9"
@@ -56,7 +56,7 @@ const Footer = () => {
               >
                 Mehdipatnam, Hyderabad
               </a>
-            </p>
+            </span>
           </div>
         </div>
 
