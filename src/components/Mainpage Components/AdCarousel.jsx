@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper/modules";
@@ -20,6 +20,30 @@ import DigitalMarketingImgPng from "../../assets/Ad Carousel Assets/DigitalMarke
 import PrintingImgPng from "../../assets/Ad Carousel Assets/Printing.png";
 
 const AdCarousel = () => {
+  const progressRef = useRef(null);
+
+  const handleProgressBar = () => {
+    document.querySelectorAll(".swiper-pagination-bullet").forEach((el) => {
+      let bar = el.querySelector(".progress-bar");
+      if (!bar) {
+        bar = document.createElement("div");
+        bar.className = "progress-bar";
+        el.appendChild(bar);
+      }
+      bar.style.width = "0%";
+      bar.style.animation = "none";
+    });
+
+    const activeBullet = document.querySelector(
+      ".swiper-pagination-bullet-active .progress-bar"
+    );
+    if (activeBullet) {
+      // Reflow to reset animation
+      void activeBullet.offsetWidth;
+      activeBullet.style.animation = "fillProgress 5s linear forwards";
+    }
+  };
+
   const slides = [
     {
       title: "Logo & Branding",
@@ -67,6 +91,8 @@ const AdCarousel = () => {
         pagination={{ clickable: true }}
         modules={[EffectFade, Autoplay, Pagination]}
         className="adcarousel-swiper"
+        onSwiper={handleProgressBar}
+        onSlideChange={handleProgressBar}
       >
         {slides.map((slide, index) => (
           <SwiperSlide
