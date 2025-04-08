@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { EffectFade, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "../../styles/Mainpage Styles/AdCarousel.css";
+import "swiper/css/pagination";
 
 import LogoImg from "../../assets/Ad Carousel Assets/Ad BG/Logo.png";
 import UiUXImg from "../../assets/Ad Carousel Assets/Ad BG/UiUX.jpg";
@@ -63,7 +64,8 @@ const AdCarousel = () => {
         effect="fade"
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        modules={[EffectFade, Autoplay]}
+        pagination={{ clickable: true }}
+        modules={[EffectFade, Autoplay, Pagination]}
         className="adcarousel-swiper"
       >
         {slides.map((slide, index) => (

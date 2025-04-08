@@ -44,16 +44,20 @@ const Homepage = () => {
         <Suspense fallback={<LoadingFallback />}>
           <Branding />
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
           <Slogan />
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <AdCarousel />
-        </Suspense>
-        <Suspense fallback={<LoadingFallback />}>
-          <div className="galleryApp">
-            <Gallery />
-          </div>
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <StatsCounter />
+          </motion.section>
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
@@ -63,9 +67,7 @@ const Homepage = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="aboutApp">
-              <About />
-            </div>
+            <About />
           </motion.section>
         </Suspense>
 
@@ -76,22 +78,16 @@ const Homepage = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="servicesApp">
-              <Services />
-            </div>
+            <Services />
           </motion.section>
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="statsApp">
-              <StatsCounter />
-            </div>
-          </motion.section>
+          <Gallery />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback />}>
+          <AdCarousel />
         </Suspense>
       </div>
     </div>

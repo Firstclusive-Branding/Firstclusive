@@ -81,6 +81,27 @@
   opacity: 0;
 }
 
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background: #aef507 !important;
+  border-radius: 0 !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+}
+
 @keyframes slideIn {
   to {
     opacity: 1;

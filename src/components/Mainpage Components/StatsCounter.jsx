@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../../styles/Mainpage Styles/StatsCounter.css";
-import { motion } from "framer-motion";
 import { IoBriefcaseSharp, IoLayersSharp } from "react-icons/io5";
 import { FaCogs } from "react-icons/fa";
 import { FaFaceSmileBeam } from "react-icons/fa6";
@@ -49,36 +48,38 @@ const StatsCounter = () => {
   }, [hasAnimated]);
 
   return (
-    <div className="stats-counter" ref={counterRef}>
-      <div className="stats-headings">
-        <p>
-          <GoDotFill /> Why choose Firstclusive?
-        </p>
-        <h1>Results That Speak for Themselves</h1>
+    <section className="stats-counter-section">
+      <div className="stats-counter" ref={counterRef}>
+        <div className="stats-headings">
+          <p>
+            <GoDotFill /> Why choose Firstclusive?
+          </p>
+          <h1>Results That Speak for Themselves</h1>
+        </div>
+        <div className="stats-counter-container">
+          <div className="stats-counter-item">
+            <IoBriefcaseSharp />
+            <h2>{counters[0]}+</h2>
+            <p>Years of Experience</p>
+          </div>
+          <div className="stats-counter-item">
+            <IoLayersSharp />
+            <h2>{counters[1]}+</h2>
+            <p>Successful Projects</p>
+          </div>
+          <div className="stats-counter-item">
+            <FaFaceSmileBeam />
+            <h2>{counters[2]}%</h2>
+            <p>Client Satisfaction</p>
+          </div>
+          <div className="stats-counter-item">
+            <FaCogs />
+            <h2>{counters[3]}+</h2>
+            <p>Core Services</p>
+          </div>
+        </div>
       </div>
-      <div className="stats-counter-container">
-        <div className="stats-counter-item">
-          <IoBriefcaseSharp />
-          <h2>{counters[0]}+</h2>
-          <p>Years of Experience</p>
-        </div>
-        <div className="stats-counter-item">
-          <IoLayersSharp />
-          <h2>{counters[1]}+</h2>
-          <p>Successful Projects</p>
-        </div>
-        <div className="stats-counter-item">
-          <FaFaceSmileBeam />
-          <h2>{counters[2]}%</h2>
-          <p>Client Satisfaction</p>
-        </div>
-        <div className="stats-counter-item">
-          <FaCogs />
-          <h2>{counters[3]}+</h2>
-          <p>Core Services</p>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
