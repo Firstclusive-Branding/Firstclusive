@@ -54,6 +54,10 @@ const Homepage = () => {
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
+          <Gallery />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback />}>
           <motion.section
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -62,10 +66,6 @@ const Homepage = () => {
           >
             <Services />
           </motion.section>
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback />}>
-          <Gallery />
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
