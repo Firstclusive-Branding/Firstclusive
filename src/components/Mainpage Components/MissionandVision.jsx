@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/Mainpage Styles/MissionandVision.css";
 import { FaBullseye } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
@@ -13,6 +13,10 @@ const fadeInUp = {
 };
 
 const MissionandVision = () => {
+  useEffect(() => {
+    document.title = "Mission & Vision - Firstclusive";
+  }, []);
+
   return (
     <section className="mission-vision-section">
       <div className="mission-vision-container">

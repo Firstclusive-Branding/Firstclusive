@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Mainpage Styles/OurLocation.css";
 
 const OurLocation = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
+
+  useEffect(() => {
+    document.title = "Our Location - Firstclusive";
+  }, []);
 
   return (
     <div className="location-container">

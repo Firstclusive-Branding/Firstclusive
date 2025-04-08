@@ -46,6 +46,7 @@
   color: #afe507;
   font-size: 2em;
   margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 .company-history-description {
@@ -57,7 +58,7 @@
   content: "";
   position: absolute;
   left: -15px;
-  top: 10px;
+  top: 12.5px;
   width: 15px;
   height: 15px;
   background-color: #afe507;

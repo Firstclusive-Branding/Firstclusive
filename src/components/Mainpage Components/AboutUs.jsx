@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -52,6 +52,10 @@ const services = [
 ];
 
 const AboutUs = () => {
+  useEffect(() => {
+    document.title = "About Us - Firstclusive";
+  }, []);
+
   return (
     <div className="aboutUs-container" id="aboutUs">
       <div className="aboutUs-hero-section">

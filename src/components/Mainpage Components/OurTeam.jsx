@@ -7,6 +7,7 @@ const OurTeam = () => {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
+    document.title = "Our Team - Firstclusive";
     setTeamMembers(TeamData);
   }, []);
 

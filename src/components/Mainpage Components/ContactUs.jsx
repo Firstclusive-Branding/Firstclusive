@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/Mainpage Styles/ContactUs.css";
 import Swal from "sweetalert2";
 import ContactImage from "../../assets/ContactUs/ContactUs.png";
@@ -9,6 +9,9 @@ import { motion } from "framer-motion";
 import ButtonAnimation from "./ButtonAnimation";
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.title = "Contact Us - Firstclusive";
+  }, []);
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);

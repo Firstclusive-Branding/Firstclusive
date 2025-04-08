@@ -1,18 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../../styles/Admin Styles/ManageBlogs.css";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
-import "react-toastify/dist/ReactToastify.css";
 import { FaPlus, FaRightLong, FaLeftLong } from "react-icons/fa6";
 import Swal from "sweetalert2";
 
-import { TiptapEditor } from "./TiptapEditor";
+import { toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
-// import { LexicalEditor } from "./LexicalEditor";
-// import { DraftEditor } from "./DraftEditor";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
@@ -166,7 +165,6 @@ const ManageBlogs = () => {
 
   return (
     <div className="manage-blog-main">
-      <ToastContainer />
       <div className="manage-blog-topbar">
         <input
           type="text"
@@ -265,7 +263,10 @@ const ManageBlogs = () => {
       {/* Modal */}
       {showModal && (
         <div className="manage-blog-modal">
-          <div className="manage-blog-modal-content">
+          <div
+            className="manage-blog-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <span
               className="modal-close-cross"
               onClick={() => setShowModal(false)}
@@ -305,36 +306,41 @@ const ManageBlogs = () => {
               }
             />
 
-            <label>Content</label>
-            {/* <div
-              style={{
-                height: "220px",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <TiptapEditor
-                initialHTML={formData.content}
-                onChange={(html) =>
-                  setFormData((prev) => ({ ...prev, content: html }))
-                }
-              />
-            </div> */}
+            {/* <label>Content</label>
             <textarea
               value={formData.content}
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, content: e.target.value }))
               }
-              style={{
-                flex: 1,
-                resize: "none",
-                padding: "8px",
-                fontSize: "14px",
-                lineHeight: "1.5",
-                borderRadius: "4px",
-                border: "1px solid #ccc",
-              }}
-            />
+            /> */}
+
+            <label>Content</label>
+            <div className="ckeditor-wrapper">
+              <CKEditor
+                editor={ClassicEditor}
+                data={formData.content}
+                onChange={(event, editor) => {
+                  const data = editor.getData();
+                  setFormData((prev) => ({ ...prev, content: data }));
+                }}
+                config={{
+                  toolbar: [
+                    "heading",
+                    "|",
+                    "bold",
+                    "italic",
+                    "link",
+                    "bulletedList",
+                    "numberedList",
+                    "blockQuote",
+                    "|",
+                    "insertTable",
+                    "undo",
+                    "redo",
+                  ],
+                }}
+              />
+            </div>
 
             <label>Author</label>
             <input
@@ -367,12 +373,6 @@ const ManageBlogs = () => {
               <button onClick={handleCreateOrUpdate}>
                 {editMode ? "Update" : "Create"}
               </button>
-              {/* <button
-                onClick={() => setShowModal(false)}
-                className="cancel-btn"
-              >
-                Cancel
-              </button> */}
             </div>
           </div>
         </div>

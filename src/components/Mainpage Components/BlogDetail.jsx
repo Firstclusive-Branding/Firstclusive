@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BlogsList from "./BlogsList";
 import "../../styles/Mainpage Styles/BlogDetails.css";
@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 const BlogDetails = () => {
   const { id } = useParams();
   const blog = BlogsList.find((item) => item.id === parseInt(id));
+
+  useEffect(() => {
+    document.title = `${blog.title} - Firstclusive`;
+  }, []);
 
   if (!blog) return <div className="not-found">Blog not found.</div>;
 

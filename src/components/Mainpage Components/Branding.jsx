@@ -14,6 +14,7 @@ const BrandingAnimation = () => {
         muted
         loop
         playsInline
+        preload="auto"
       />
       <div className="branding-text-container">
         <motion.h1

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/CompanyHistory.css";
 import theBeginning from "../../assets/Company-history/the-beginning.jpg";
@@ -14,6 +14,10 @@ const fadeInUp = {
 };
 
 const CompanyHistory = () => {
+  useEffect(() => {
+    document.title = `Company History - Firstclusive`;
+  }, []);
+
   return (
     <section className="company-history-section">
       <div className="company-history-container">

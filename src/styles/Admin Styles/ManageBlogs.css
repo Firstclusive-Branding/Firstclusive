@@ -190,14 +190,29 @@
   font-size: 14px;
 }
 
+/* .manage-blog-modal-content textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  min-height: 200px;
+  resize: vertical;
+  overflow-y: auto;
+} */
+
+.ckeditor-wrapper {
+  margin-top: 10px;
+}
+
+.ck-editor__editable_inline {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 .modal-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-}
-
-.cancel-btn {
-  background: #ddd;
 }
 
 .blogs-swal-confirm {

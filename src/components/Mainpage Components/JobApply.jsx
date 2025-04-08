@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
@@ -7,6 +7,10 @@ import "../../styles/Mainpage Styles/JobApply.css";
 const JobApply = () => {
   const location = useLocation();
   const { id, title } = location.state || {};
+
+  useEffect(() => {
+    document.title = `Apply for ${title} - Firstclusive Careers`;
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();

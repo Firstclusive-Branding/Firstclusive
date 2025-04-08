@@ -58,30 +58,6 @@ const MainLayout = () => {
       <Outlet />
       <Footer />
       <FloatingIcons />
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={true}
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="dark"
-        toastStyle={{
-          background: "#1e1e1e",
-          color: "#ffffff",
-          borderLeft: "6px solid #aef507",
-          borderRadius: "8px",
-          padding: "12px 16px",
-          fontSize: "14px",
-          fontWeight: "500",
-          boxShadow: "0 0 10px rgba(0,0,0,0.4)",
-        }}
-        progressStyle={{
-          background: "#aef507",
-        }}
-      />
       <CustomCursor />
     </div>
   );
@@ -189,6 +165,30 @@ function App() {
   return (
     <div className="app">
       <RouterProvider router={myRoutes} />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+        toastStyle={{
+          background: "#1e1e1e",
+          color: "#ffffff",
+          borderLeft: "6px solid #aef507",
+          borderRadius: "8px",
+          padding: "12px 16px",
+          fontSize: "14px",
+          fontWeight: "500",
+          boxShadow: "0 0 10px rgba(0,0,0,0.4)",
+        }}
+        progressStyle={{
+          background: "#aef507",
+        }}
+      />
     </div>
   );
 }

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogsList from "./BlogsList";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Blogs.css";
 
 const Blogs = () => {
+  useEffect(() => {
+    document.title = `Blogs - Firstclusive`;
+  }, []);
+
   return (
     <div className="blogs-container">
       <h1 className="blogs-heading">Our Latest Blogs</h1>

@@ -32,6 +32,9 @@ const LoadingFallback = () => (
 
 const Homepage = () => {
   useEffect(() => {
+    document.title = "Firstclusive Branding";
+  }, []);
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 

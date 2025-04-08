@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 // import jobs from "../../assets/Jobs.json";
@@ -215,6 +215,9 @@ const JobItem = ({ job }) => {
 };
 
 const Careers = () => {
+  useEffect(() => {
+    document.title = "Careers - Firstclusive";
+  }, []);
   return (
     <div className="careers-container">
       <h1 className="careers-title">Careers</h1>

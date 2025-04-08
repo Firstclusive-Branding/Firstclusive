@@ -38,6 +38,9 @@ const heroServices = [
 ];
 
 const OurServices = () => {
+  useEffect(() => {
+    document.title = "Out Services - Firstclusive";
+  }, []);
   const location = useLocation();
 
   useEffect(() => {

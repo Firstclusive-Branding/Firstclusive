@@ -8,6 +8,8 @@ const AdminLayout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = `Admin Panel - Firstclusive`;
+
     const isLoggedIn = localStorage.getItem("adminAuthenticated") === "true";
     if (!isLoggedIn) {
       navigate("/admin", { replace: true });
