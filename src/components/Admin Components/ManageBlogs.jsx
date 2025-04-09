@@ -8,7 +8,6 @@ import { FaPlus, FaRightLong, FaLeftLong } from "react-icons/fa6";
 import Swal from "sweetalert2";
 
 import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";

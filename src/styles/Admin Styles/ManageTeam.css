@@ -77,24 +77,34 @@
 
 .manage-team-actions {
   display: flex;
+  justify-content: center;
   gap: 8px;
 }
 
 .icon-btn {
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer !important;
   font-size: 16px;
   padding: 4px;
   transition: color 0.2s ease;
 }
+.icon-btn * {
+  cursor: pointer !important;
+}
+.team-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 .edit-btn {
-  color: #aef507;
+  color: #23d100;
 }
 
 .edit-btn:hover {
-  color: #d4ff45;
+  color: #1ba100;
 }
 
 .delete-btn {
@@ -102,7 +112,7 @@
 }
 
 .delete-btn:hover {
-  color: #ff1a1a;
+  color: #d30000;
 }
 
 /* MODAL STYLES */
@@ -118,16 +128,21 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .team-modal-content {
   background-color: #1e1e1e;
-  padding: 30px;
-  border-radius: 10px;
+  color: #fff;
+  padding: 30px 24px;
+  border: 2px solid #3f5800;
+  border-radius: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
-  box-shadow: 0 0 20px rgba(174, 245, 7, 0.2);
 }
 
 .team-modal-close {
@@ -143,24 +158,37 @@
 
 .team-modal-title {
   color: #aef507;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.team-modal-form input {
+.team-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-modal-form input,
+.team-modal-form textarea {
   width: 100%;
   padding: 10px 14px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   border-radius: 6px;
   border: 1px solid #444;
   background-color: #2a2a2a;
   color: #fff;
   font-size: 14px;
   transition: border-color 0.2s ease;
+  resize: vertical;
+  max-height: 100px;
+  min-height: 40px;
 }
-
-.team-modal-form input:focus {
+.team-modal-form textarea {
+  min-height: 100px;
+}
+.team-modal-form input:focus,
+.team-modal-form textarea:focus {
   border-color: #aef507;
   outline: none;
 }
@@ -174,9 +202,41 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 15px;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .team-modal-submit:hover {
   background-color: #c8ff38;
+}
+
+.team-modal-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ccc;
+  margin: 10px 0 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.team-modal-upload-label:hover {
+  color: #fff;
+}
+
+.team-modal-upload-label input {
+  margin-top: 8px;
+}
+
+.team-modal-upload-label * {
+  cursor: pointer !important;
+}
+
+.team-modal-upload-label svg {
+  margin: 0 8px 0 0;
+  color: #aef507;
 }

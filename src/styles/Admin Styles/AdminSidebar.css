@@ -37,6 +37,11 @@
   background-color: #000000;
 }
 
+.admin-sidebar-menu li.active {
+  background-color: #000000;
+  font-weight: 600;
+}
+
 .admin-sidebar-icon {
   font-size: 18px;
   color: #aef507;

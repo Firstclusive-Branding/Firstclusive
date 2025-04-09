@@ -22,7 +22,7 @@ const ManageJobs = () => {
   const openModal = (job = null) => {
     if (job) {
       setFormData({
-        title: job.title,
+        title: job.jobtitle,
         location: job.location,
         description: job.description,
         company_description: job.details.company_description,
@@ -87,7 +87,7 @@ const ManageJobs = () => {
   };
 
   const filteredJobs = Jobs.filter((job) =>
-    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+    job.jobtitle.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -115,7 +115,7 @@ const ManageJobs = () => {
               }`}
               onClick={() => setSelectedJob(job)}
             >
-              <h4 className="job-title">{job.title}</h4>
+              <h4 className="job-title">{job.jobtitle}</h4>
               <p className="job-description">{job.description}</p>
             </div>
           ))}
@@ -123,7 +123,7 @@ const ManageJobs = () => {
 
         <div className="manage-jobs-right">
           <div className="job-detail-header">
-            <h3>{selectedJob.title}</h3>
+            <h3>{selectedJob.jobtitle}</h3>
             <div className="job-actions">
               <button
                 className="icon-btn edit-btn"
@@ -133,7 +133,7 @@ const ManageJobs = () => {
               </button>
               <button
                 className="icon-btn delete-btn"
-                onClick={(e) => handleDelete(e, selectedJob.title)}
+                onClick={(e) => handleDelete(e, selectedJob.jobtitle)}
               >
                 <FaTrashAlt size={18} />
               </button>

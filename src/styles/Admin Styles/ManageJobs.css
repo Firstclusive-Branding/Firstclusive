@@ -61,9 +61,12 @@
   margin-bottom: 16px;
   padding: 12px;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: background-color 0.2s ease;
   border: 1px solid transparent;
+}
+.job-item * {
+  cursor: pointer !important;
 }
 
 .job-item:hover {
