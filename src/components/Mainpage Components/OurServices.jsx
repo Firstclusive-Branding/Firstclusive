@@ -39,7 +39,7 @@ const heroServices = [
 
 const OurServices = () => {
   useEffect(() => {
-    document.title = "Out Services - Firstclusive";
+    document.title = "Our Services - Firstclusive";
   }, []);
   const location = useLocation();
 

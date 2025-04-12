@@ -11,6 +11,9 @@ const baseURL = import.meta.env.VITE_API_URL;
 const ManageTeam = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+
   const [formData, setFormData] = useState({
     _id: null,
     firstName: "",
@@ -25,15 +28,17 @@ const ManageTeam = () => {
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const fetchTeamMembers = async (search = "") => {
+  const fetchTeamMembers = async (search = "", page = currentPage) => {
     try {
       setLoading(true);
       const response = await axios.post(`${baseURL}/api/admin/team/getall`, {
-        pageno: 0,
-        sortby: { createdAt: "desc" },
+        pageno: page,
+        sortby: { updatedAt: "desc" },
         search: search,
       });
+
       setTeamData(response.data.data.teams || []);
+      setTotalPages(response.data.data.totalPages || 1);
     } catch (error) {
       toast.error("Failed to fetch team members.");
     } finally {
@@ -42,8 +47,12 @@ const ManageTeam = () => {
   };
 
   useEffect(() => {
-    fetchTeamMembers();
-  }, []);
+    const delayDebounce = setTimeout(() => {
+      setCurrentPage(0);
+      fetchTeamMembers(searchTerm, 0);
+    }, 400);
+    return () => clearTimeout(delayDebounce);
+  }, [searchTerm]);
 
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
@@ -227,7 +236,9 @@ const ManageTeam = () => {
                 <td>{member.firstName}</td>
                 <td>{member.lastName}</td>
                 <td>{member.role}</td>
-                <td>{member.email}</td>
+                <td>
+                  <a href={`mailto:${member.email}`}>{member.email}</a>
+                </td>
                 <td>{member.mobile}</td>
                 <td>
                   {member.description?.length > 100
@@ -258,6 +269,31 @@ const ManageTeam = () => {
             ))}
           </tbody>
         </table>
+        <div className="manage-team-pagination">
+          <button
+            onClick={() => {
+              const prev = Math.max(currentPage - 1, 0);
+              setCurrentPage(prev);
+              fetchTeamMembers(searchTerm, prev);
+            }}
+            disabled={currentPage === 0}
+          >
+            Prev
+          </button>
+          <span>
+            Page {currentPage + 1} of {totalPages}
+          </span>
+          <button
+            onClick={() => {
+              const next = Math.min(currentPage + 1, totalPages - 1);
+              setCurrentPage(next);
+              fetchTeamMembers(searchTerm, next);
+            }}
+            disabled={currentPage + 1 >= totalPages}
+          >
+            Next
+          </button>
+        </div>
       </div>
 
       {isModalOpen && (
