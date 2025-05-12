@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import "../../styles/Mainpage Styles/OurServices.css";
 import servicesList from "./OurServicesList";
-import logoBranding from "../../assets/Services/Logo & Branding.jpg";
+import logoBranding from "../../assets/Services/Logo & Branding.png";
 import UIUX from "../../assets/Services/UIUX Design.webp";
 import WebDev from "../../assets/Services/Web Development.webp";
 import digitalMarketing from "../../assets/Services/Digital Marketing.webp";

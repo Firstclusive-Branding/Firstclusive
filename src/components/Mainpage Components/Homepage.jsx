@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Homepage.css";
+import Testimonials from "./Testimonials";
 
 const Branding = lazy(() =>
   import("../../components/Mainpage Components/Branding")
@@ -40,56 +41,64 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <div className="middleComponents">
-        <Suspense fallback={<LoadingFallback />}>
-          <Branding />
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Branding />
+      </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Slogan />
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <Slogan />
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <AdCarousel />
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <AdCarousel />
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <Gallery />
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <Gallery />
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <motion.section
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <Services />
+        </motion.section>
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <motion.section
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <Services />
-          </motion.section>
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <motion.section
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <About />
+        </motion.section>
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <motion.section
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <About />
-          </motion.section>
-        </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <motion.section
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <Testimonials />
+        </motion.section>
+      </Suspense>
 
-        <Suspense fallback={<LoadingFallback />}>
-          <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <StatsCounter />
-          </motion.section>
-        </Suspense>
-      </div>
+      <Suspense fallback={<LoadingFallback />}>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <StatsCounter />
+        </motion.section>
+      </Suspense>
     </div>
   );
 };

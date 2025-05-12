@@ -1,4 +1,4 @@
-import logoAndBrandingImage from "../../assets/Services/Logo & Branding.jpg";
+import logoAndBrandingImage from "../../assets/Services/Logo & Branding.png";
 import uiUxDesignImage from "../../assets/Services/UIUX Design.webp";
 import webDevelopmentImage from "../../assets/Services/Web Development.webp";
 import digitalMarketingImage from "../../assets/Services/Digital Marketing.webp";

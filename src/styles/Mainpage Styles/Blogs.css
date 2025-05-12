@@ -59,7 +59,10 @@
   padding: 20px;
   flex: 1;
 }
-
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+}
 .blog-title {
   font-size: 20px;
   color: #fff;
@@ -79,7 +82,8 @@
   margin-bottom: 20px;
 }
 
-.blog-author {
+.blog-author,
+.blog-date {
   font-size: 16px;
   color: #999;
   font-style: italic;
@@ -130,9 +134,9 @@
     font-size: 14px;
   }
 
-  .blog-author {
+  .blog-author,
+  .blog-date {
     font-size: 13px;
-    padding: 0 16px 12px;
   }
 
   .blog-image {
@@ -161,9 +165,9 @@
     font-size: 13px;
   }
 
-  .blog-author {
+  .blog-author,
+  .blog-date {
     font-size: 12px;
-    padding: 0 12px 10px;
   }
 
   .blog-image {

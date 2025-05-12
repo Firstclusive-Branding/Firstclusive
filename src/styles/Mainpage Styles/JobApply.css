@@ -18,7 +18,6 @@
   background-color: #121212;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(175, 245, 7, 0.2);
 }
 
 .form-group {
@@ -45,7 +44,8 @@
   color: #ffffff;
 }
 
-.form-group input[readonly] {
+.form-group input[readonly],
+.form-group input[disabled] {
   background-color: #1c1c1c;
   opacity: 0.8;
 }
@@ -66,6 +66,7 @@
   background-color: #98c000;
   transform: scale(1.02);
 }
+
 .my-swal-popup {
   background-color: #222;
   color: #eee;
@@ -95,6 +96,7 @@
   background-color: #98c000;
   transform: scale(1.02);
 }
+
 @media (max-width: 768px) {
   .job-apply-form {
     padding: 20px;

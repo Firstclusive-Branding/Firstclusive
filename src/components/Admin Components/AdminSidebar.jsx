@@ -6,7 +6,7 @@ import FBLogo from "../../assets/FBLogo3A.svg";
 // Import icons
 import { MdDashboard, MdWork } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
-import { FaBlogger } from "react-icons/fa";
+import { FaBlogger, FaComments } from "react-icons/fa";
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
@@ -43,6 +43,12 @@ const AdminSidebar = () => {
           onClick={() => navigate("/admin/manage-blogs")}
         >
           <FaBlogger className="admin-sidebar-icon" /> Blogs
+        </li>
+        <li
+          className={isActive("/admin/manage-comments") ? "active" : ""}
+          onClick={() => navigate("/admin/manage-comments")}
+        >
+          <FaComments className="admin-sidebar-icon" /> Comments
         </li>
       </ul>
     </aside>

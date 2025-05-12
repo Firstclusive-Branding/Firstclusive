@@ -6,7 +6,7 @@ import "../../styles/Mainpage Styles/JobApply.css";
 
 const JobApply = () => {
   const location = useLocation();
-  const { id, title } = location.state || {};
+  const { title } = location.state || {};
 
   useEffect(() => {
     document.title = `Apply for ${title} - Firstclusive Careers`;
@@ -16,10 +16,8 @@ const JobApply = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("job_id", id);
     formData.append("job_title", title);
     formData.append("subject", `New Application Received for ${title}`);
-
     formData.append("access_key", "8b84e2e4-1ed4-4c9e-8951-61df24bbf6ea");
 
     try {
@@ -31,7 +29,6 @@ const JobApply = () => {
         body: formData,
       });
       const json = await res.json();
-      console.log(json);
       if (json.success) {
         Swal.fire({
           title: "Success",
@@ -81,25 +78,16 @@ const JobApply = () => {
       <h1>Apply for Job</h1>
       <form className="job-apply-form" onSubmit={onSubmit}>
         <div className="form-group">
-          <label>Job ID</label>
-          <input
-            type="text"
-            name="job_id_display"
-            value={id || ""}
-            readOnly
-            disabled
-          />
-        </div>
-        <div className="form-group">
           <label>Job Title</label>
           <input
             type="text"
-            name="job_title_display"
+            name="job_title"
             value={title || ""}
             readOnly
             disabled
           />
         </div>
+
         <div className="form-group">
           <label>Your Name</label>
           <input
@@ -109,6 +97,7 @@ const JobApply = () => {
             required
           />
         </div>
+
         <div className="form-group">
           <label>Your Email</label>
           <input
@@ -118,24 +107,32 @@ const JobApply = () => {
             required
           />
         </div>
+
         <div className="form-group">
-          <label>Your Phone Number</label>
+          <label>Contact Number</label>
           <input
             type="tel"
             placeholder="Enter Your Phone Number"
-            name="phone"
+            name="contact"
             required
           />
         </div>
 
         <div className="form-group">
-          <label>Your LinkedIn Profile Link</label>
+          <label>Years of Experience</label>
           <input
             type="text"
-            placeholder="Enter Your LinkedIn Profile Link"
-            name="LinkedIn"
+            placeholder="e.g. 2 years"
+            name="experience"
+            required
           />
         </div>
+
+        <div className="form-group">
+          <label>Upload Your CV</label>
+          <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+        </div>
+
         <button type="submit" className="submit-button">
           SUBMIT APPLICATION
         </button>

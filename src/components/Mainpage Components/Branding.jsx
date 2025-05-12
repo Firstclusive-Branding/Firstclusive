@@ -1,8 +1,9 @@
 import React from "react";
-import UFO from "../../assets/UFO.gif";
+import UFO from "../../assets/Branding Assets/UFO.gif";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Branding.css";
-import EarthVid from "../../assets/Earth.mp4";
+import EarthVid from "../../assets/Branding Assets/Earth.mp4";
+import EarthImg from "../../assets/Branding Assets/Earth.jpeg";
 
 const BrandingAnimation = () => {
   return (
@@ -15,7 +16,10 @@ const BrandingAnimation = () => {
         loop
         playsInline
         preload="auto"
+        type="video/mp4"
+        poster={EarthImg}
       />
+
       <div className="branding-text-container">
         <motion.h1
           initial={{ x: "-50vw" }}

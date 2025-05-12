@@ -44,6 +44,7 @@ import ManageJobs from "./components/Admin Components/ManageJobs";
 import ManageTeam from "./components/Admin Components/ManageTeam";
 import ManageBlogs from "./components/Admin Components/ManageBlogs";
 import ManageSingleBlog from "./components/Admin Components/ManageSingleBlog";
+import Comments from "./components/Admin Components/Comments";
 
 // Layout for main website pages
 const MainLayout = () => {
@@ -151,6 +152,15 @@ const myRoutes = createBrowserRouter([
             element: (
               <ProtectedRoute
                 element={<ManageSingleBlog />}
+                roleKey="adminAuthenticated"
+              />
+            ),
+          },
+          {
+            path: "manage-comments",
+            element: (
+              <ProtectedRoute
+                element={<Comments />}
                 roleKey="adminAuthenticated"
               />
             ),
