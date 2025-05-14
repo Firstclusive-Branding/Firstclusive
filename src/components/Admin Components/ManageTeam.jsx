@@ -100,7 +100,6 @@ const ManageTeam = () => {
         `${baseURL}/api/admin/team/uploadimage/${memberId}`,
         uploadData
       );
-      toast.success("Image uploaded successfully!");
     } catch (error) {
       toast.error("Failed to upload image.");
     }

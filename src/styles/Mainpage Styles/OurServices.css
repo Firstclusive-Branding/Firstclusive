@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: url("../../assets/DotBg.png");
-  margin: 6rem auto;
-  max-width: 100vw;
-  overflow: hidden;
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
+  padding-top: 100px;
 }
+
 .our-services-container {
   width: 100%;
   margin: 0 auto;

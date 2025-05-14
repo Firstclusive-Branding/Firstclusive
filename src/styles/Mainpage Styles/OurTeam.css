@@ -1,7 +1,7 @@
-/* OurTeam.css */
-
 .team-container {
-  background-color: #0e0e0e;
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
   color: #ffffff;
   padding: 100px 20px;
   min-height: 100vh;
@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: url("../../assets/DotBg.png");
 }
 
 .team-heading {

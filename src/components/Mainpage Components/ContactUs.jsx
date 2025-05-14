@@ -12,51 +12,60 @@ const ContactUs = () => {
   useEffect(() => {
     document.title = "Contact Us - Firstclusive";
   }, []);
+
   const onSubmit = async (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const topics = [];
     const topicCheckboxes = event.target.querySelectorAll(
       'input[name="topic"]:checked'
     );
-
     topicCheckboxes.forEach((checkbox) => {
       topics.push(checkbox.value);
     });
 
-    if (topics.length > 0) {
-      formData.append("topic", topics.join(", "));
-    }
+    const payload = {
+      name: formData.get("name"),
+      companyname: formData.get("Company/Brand_Name") || "",
+      mobile: formData.get("Phone_Number"),
+      email: formData.get("email"),
+      subject: topics.join(", ") || "General Inquiry",
+      message: formData.get("message"),
+    };
 
-    formData.append("access_key", "8b84e2e4-1ed4-4c9e-8951-61df24bbf6ea");
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/user/contact/create`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const result = await res.json();
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      Swal.fire({
-        title: "Thanks for reaching out!",
-        text: "We'll get back to you soon!",
-        icon: "success",
-        confirmButtonText: "OK",
-        customClass: {
-          popup: "my-swal-popup",
-          title: "my-swal-title",
-          content: "my-swal-content",
-          confirmButton: "my-swal-button",
-        },
-      });
-      event.target.reset();
-    } else {
+      if (result.status === 200 && result.error === false) {
+        Swal.fire({
+          title: "Thanks for reaching out!",
+          text: "We'll get back to you soon!",
+          icon: "success",
+          confirmButtonText: "OK",
+          customClass: {
+            popup: "my-swal-popup",
+            title: "my-swal-title",
+            content: "my-swal-content",
+            confirmButton: "my-swal-button",
+          },
+        });
+        event.target.reset();
+      } else {
+        throw new Error("API responded with an error");
+      }
+    } catch (error) {
       Swal.fire({
         icon: "error",
         title: "Oops...",

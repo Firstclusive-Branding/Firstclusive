@@ -1,9 +1,16 @@
+.careers-bg-wrapper {
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .careers-container {
-  background: url("../../assets/DotBg.png");
   color: #ffffff;
   padding: 120px 20px;
   padding-bottom: 40px;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .careers-title {

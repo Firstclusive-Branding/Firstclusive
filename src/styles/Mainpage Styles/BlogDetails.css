@@ -1,5 +1,8 @@
 .blog-details-section {
-  background-color: #0e0e0e;
+  /* background-color: #0e0e0e; */
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
   padding: 100px 20px;
   color: #fff;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -16,7 +19,7 @@
 .blog-details-container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #121212;
+  /* background-color: #121212; */
   padding: 40px;
   border-left: 2px solid #aef507;
   border-right: 2px solid #aef507;

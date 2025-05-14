@@ -1,8 +1,11 @@
 .company-history-section {
-  background-image: url("../../assets/DotBg.png");
+  /* background-color: #0e0e0e; */
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 .company-history-container {
-  background-color: #0e0e0e;
+  /* background-color: #0e0e0e; */
   color: #ffffff;
   font-family: "Arial", sans-serif;
   padding: 120px 20px;

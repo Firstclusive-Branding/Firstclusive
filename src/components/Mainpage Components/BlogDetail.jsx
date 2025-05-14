@@ -27,10 +27,7 @@ const BlogDetails = () => {
 
   const fetchBlogDetails = async () => {
     try {
-      const response = await axios.post(
-        `${baseURL}/api/admin/blogs/singleblog`,
-        { _id: id }
-      );
+      const response = await axios.get(`${baseURL}/api/user/blog/single/${id}`);
       if (response.data.status === 200) {
         setBlog(response.data.data);
         document.title = `${response.data.data.title} - Firstclusive`;
@@ -86,7 +83,14 @@ const BlogDetails = () => {
     }
   };
 
-  if (loading) return <div className="loader">Loading blog details...</div>;
+  if (loading)
+    return (
+      <div className="loader">
+        <div data-glitch="Loading..." className="glitch">
+          Loading...
+        </div>
+      </div>
+    );
   if (!blog) return <div className="not-found">Blog not found.</div>;
 
   return (

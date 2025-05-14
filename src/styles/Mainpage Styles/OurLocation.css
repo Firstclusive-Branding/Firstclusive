@@ -1,12 +1,14 @@
 .location-container {
   display: flex;
   flex-direction: column;
-  background: url("../../assets/DotBg.png");
   justify-content: center;
   align-items: center;
   padding: 80px 20px;
   min-height: 100vh;
   gap: 40px;
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 .location-section {
   display: flex;

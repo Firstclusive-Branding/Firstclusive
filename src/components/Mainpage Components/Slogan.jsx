@@ -9,7 +9,7 @@ const Slogan = () => {
       <span className="circle-gradient-background"></span>
       <motion.h1
         className="slogan-text results"
-        initial={{ opacity: 0, opacity: 0, x: "-50vw" }}
+        initial={{ opacity: 0, x: "-50vw" }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "spring" }}
         viewport={{ once: true, amount: 0.5 }}

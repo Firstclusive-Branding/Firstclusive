@@ -1,0 +1,63 @@
+.manage-contacts-container {
+  padding: 24px;
+  min-height: 100vh;
+  color: #0e0e0e;
+}
+
+.contacts-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.contacts-table th {
+  background-color: #0e0e0e;
+  color: #aef507;
+  font-weight: 600;
+}
+
+.contacts-table tr:hover {
+  background-color: #aef50733;
+}
+
+.contact-delete-btn {
+  background-color: transparent;
+  color: #ff4d4d;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-delete-btn svg {
+  font-size: 1.2rem;
+}
+
+.contact-delete-btn * {
+  cursor: pointer !important;
+}
+
+.contact-delete-btn:hover {
+  color: #0e0e0e;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}

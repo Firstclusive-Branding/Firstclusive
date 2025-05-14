@@ -99,47 +99,36 @@ const Comments = () => {
                   <th>Message</th>
                   <th>Blog Title</th>
                   <th>Date</th>
-                  <th>Status</th>
-                  <th>Action</th>
+                  <th>Approve / Deny</th>
                 </tr>
               </thead>
               <tbody>
                 {comments.map((comment) => (
                   <tr key={comment._id}>
-                    <td>{comment.name}</td>
-                    <td>{comment.email}</td>
+                    <td style={{ fontStyle: "italic", fontWeight: "bold" }}>
+                      {comment.name}
+                    </td>
+                    <td>
+                      <a href={`mailto:${comment.email}`}>{comment.email}</a>
+                    </td>
                     <td>{comment.mobile}</td>
-                    <td>{comment.message}</td>
+                    <td style={{ fontStyle: "italic", fontWeight: "bold" }}>
+                      {comment.message}
+                    </td>
                     <td>{comment.blogtitle}</td>
                     <td>{new Date(comment.createdAt).toLocaleString()}</td>
-                    <td
-                      style={{
-                        color: comment.approved ? "#4caf50" : "#f44336",
-                      }}
-                    >
-                      {comment.approved ? "Approved" : "Denied"}
-                    </td>
+
                     <td className="table-actions">
-                      <button
-                        className={`comments-btn-approve ${
-                          comment.approved ? "comments-btn-disabled" : ""
-                        }`}
-                        onClick={() => handleApproval(comment._id, true)}
-                        disabled={comment.approved}
-                      >
-                        Approve
-                      </button>
-                      <button
-                        className={`comments-btn-deny ${
-                          comment.approved === false
-                            ? "comments-btn-disabled"
-                            : ""
-                        }`}
-                        onClick={() => handleApproval(comment._id, false)}
-                        disabled={comment.approved === false}
-                      >
-                        Deny
-                      </button>
+                      <label className="comments-approval-switch">
+                        <input
+                          type="checkbox"
+                          checked={comment.approved}
+                          onChange={(e) =>
+                            handleApproval(comment._id, e.target.checked)
+                          }
+                        />
+                        <span className="comments-approval-slider round"></span>
+                      </label>
                     </td>
                   </tr>
                 ))}

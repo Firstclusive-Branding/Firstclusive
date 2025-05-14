@@ -33,6 +33,8 @@ import MissionandVision from "./components/Mainpage Components/MissionandVision"
 import FloatingIcons from "./components/Mainpage Components/FloatingIcons";
 import Blogs from "./components/Mainpage Components/Blogs";
 import BlogDetails from "./components/Mainpage Components/BlogDetail";
+import Terms from "./components/Mainpage Components/Terms";
+import Privacy from "./components/Mainpage Components/Privacy";
 
 // Admin Components
 import AdminLayout from "./components/Admin Components/AdminLayout";
@@ -45,6 +47,8 @@ import ManageTeam from "./components/Admin Components/ManageTeam";
 import ManageBlogs from "./components/Admin Components/ManageBlogs";
 import ManageSingleBlog from "./components/Admin Components/ManageSingleBlog";
 import Comments from "./components/Admin Components/Comments";
+import JobApplicant from "./components/Admin Components/JobApplicant";
+import ManageContacts from "./components/Admin Components/ManageContacts";
 
 // Layout for main website pages
 const MainLayout = () => {
@@ -97,6 +101,8 @@ const myRoutes = createBrowserRouter([
       { path: "/our-portfolio", element: <OurPortfolio /> },
       { path: "/mission-and-vision", element: <MissionandVision /> },
       { path: "/blogs", element: <Blogs /> },
+      { path: "/terms-and-conditions", element: <Terms /> },
+      { path: "/privacy-policy", element: <Privacy /> },
       { path: "/blogs/:id", element: <BlogDetails /> },
     ],
   },
@@ -125,6 +131,15 @@ const myRoutes = createBrowserRouter([
             element: (
               <ProtectedRoute
                 element={<ManageJobs />}
+                roleKey="adminAuthenticated"
+              />
+            ),
+          },
+          {
+            path: "manage-job-applicant",
+            element: (
+              <ProtectedRoute
+                element={<JobApplicant />}
                 roleKey="adminAuthenticated"
               />
             ),
@@ -161,6 +176,15 @@ const myRoutes = createBrowserRouter([
             element: (
               <ProtectedRoute
                 element={<Comments />}
+                roleKey="adminAuthenticated"
+              />
+            ),
+          },
+          {
+            path: "manage-contacts",
+            element: (
+              <ProtectedRoute
+                element={<ManageContacts />}
                 roleKey="adminAuthenticated"
               />
             ),

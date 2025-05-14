@@ -7,7 +7,9 @@
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  background: url("../../assets/DotBg.png");
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 .contact-moto {
   padding: 20px;

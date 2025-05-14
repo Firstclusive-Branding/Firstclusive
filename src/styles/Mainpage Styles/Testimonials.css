@@ -63,7 +63,15 @@
 }
 .testimonial-card:hover {
   transform: translateY(-10px) !important;
-  filter: drop-shadow(0 10px 25px rgba(174, 245, 7, 0.2));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+}
+
+.testimonial-card:hover .testimonials-quote-icon.testimonials-left {
+  transform: scale(1.2) rotate(-15deg);
+}
+
+.testimonial-card:hover .testimonials-quote-icon.testimonials-right {
+  transform: scale(1.2) rotate(15deg);
 }
 
 .testimonials-quote-icon {
@@ -72,6 +80,7 @@
   opacity: 0.7;
   position: absolute;
   z-index: 2;
+  transition: transform 0.5s ease;
 }
 
 .testimonials-quote-icon.testimonials-left {

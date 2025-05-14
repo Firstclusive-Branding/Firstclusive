@@ -1,8 +1,9 @@
 .mission-vision-section {
-  margin-top: 40px;
-  padding: 60px 20px;
+  padding: 100px 20px;
   color: #ffffff;
-  background: url("../../assets/DotBg.png");
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 
 .mission-vision-container {

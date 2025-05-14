@@ -1,0 +1,80 @@
+.applicants-container {
+  padding: 24px;
+  min-height: 100vh;
+  color: #0e0e0e;
+}
+
+.applicants-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(174, 245, 7, 0.15);
+}
+
+.applicants-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applicants-table th,
+.applicants-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.applicants-table th {
+  background-color: #0e0e0e;
+  color: #aef507;
+  font-weight: 600;
+}
+
+.applicants-table tr:hover {
+  background-color: #aef50733;
+}
+
+.job-applicant-pdf-icon {
+  color: #0e0e0e;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-applicant-pdf-icon:hover {
+  color: #1900d3;
+}
+
+.job-applicant-pdf-icon * {
+  cursor: pointer !important;
+}
+
+.job-applicant-pdf-icon svg {
+  font-size: 1.3rem;
+}
+
+.applicant-delete-btn {
+  background-color: transparent;
+  color: #ff4d4d;
+  border: none;
+
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.applicant-delete-btn * {
+  cursor: pointer !important;
+}
+
+.applicant-delete-btn svg {
+  font-size: 1.2rem;
+}
+
+.applicant-delete-btn:hover {
+  color: #0e0e0e;
+}
+
+.no-applicants {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}

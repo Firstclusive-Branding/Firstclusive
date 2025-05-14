@@ -5,8 +5,8 @@ import FBLogo from "../../assets/FBLogo3A.svg";
 
 // Import icons
 import { MdDashboard, MdWork } from "react-icons/md";
-import { IoIosPeople } from "react-icons/io";
-import { FaBlogger, FaComments } from "react-icons/fa";
+import { IoIosPeople, IoIosContact } from "react-icons/io";
+import { FaBlogger, FaComments, FaUserTie } from "react-icons/fa";
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
@@ -33,6 +33,12 @@ const AdminSidebar = () => {
           <MdWork className="admin-sidebar-icon" /> Jobs
         </li>
         <li
+          className={isActive("/admin/manage-job-applicant") ? "active" : ""}
+          onClick={() => navigate("/admin/manage-job-applicant")}
+        >
+          <FaUserTie className="admin-sidebar-icon" /> Job Applicants
+        </li>
+        <li
           className={isActive("/admin/manage-team") ? "active" : ""}
           onClick={() => navigate("/admin/manage-team")}
         >
@@ -49,6 +55,13 @@ const AdminSidebar = () => {
           onClick={() => navigate("/admin/manage-comments")}
         >
           <FaComments className="admin-sidebar-icon" /> Comments
+        </li>
+
+        <li
+          className={isActive("/admin/manage-contacts") ? "active" : ""}
+          onClick={() => navigate("/admin/manage-contacts")}
+        >
+          <IoIosContact className="admin-sidebar-icon" /> Contact Us
         </li>
       </ul>
     </aside>

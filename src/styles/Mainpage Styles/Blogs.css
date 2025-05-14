@@ -1,11 +1,16 @@
+.blogs-container-wrapper {
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .blogs-container {
-  margin-top: 100px;
   padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../assets/DotBg.png");
+  padding-top: 100px;
 }
 
 .blogs-heading {

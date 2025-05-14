@@ -66,8 +66,8 @@
 .ufo {
   width: 100%;
   height: 100%;
-  animation: UFOAnimation 2s ease-in-out, floatUFO 3s ease-in-out infinite;
-  animation-delay: 0s, 2s;
+  animation: UFOAnimation 3s ease-in-out, floatUFO 3s ease-in-out infinite;
+  animation-delay: 0s, 3s;
 }
 
 @keyframes UFOAnimation {

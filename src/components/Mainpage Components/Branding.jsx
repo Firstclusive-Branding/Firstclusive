@@ -7,7 +7,14 @@ import EarthImg from "../../assets/Branding Assets/Earth.jpeg";
 
 const BrandingAnimation = () => {
   return (
-    <section className="branding-container" id="home">
+    <motion.section
+      className="branding-container"
+      id="home"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
       <video
         className="earth-video-background"
         src={EarthVid}
@@ -24,7 +31,7 @@ const BrandingAnimation = () => {
         <motion.h1
           initial={{ x: "-50vw" }}
           whileInView={{ x: 0 }}
-          transition={{ type: "spring" }}
+          transition={{ duration: 2, type: "spring" }}
           viewport={{ once: true }}
           className="branding-text firstclusive"
         >
@@ -33,7 +40,7 @@ const BrandingAnimation = () => {
         <motion.h1
           initial={{ x: "50vw" }}
           whileInView={{ x: 0 }}
-          transition={{ type: "spring" }}
+          transition={{ duration: 2, type: "spring" }}
           viewport={{ once: true }}
           className="branding-text branding"
         >
@@ -43,7 +50,7 @@ const BrandingAnimation = () => {
       <div className="ufo-container">
         <img src={UFO} alt="UFO" className="ufo" />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../styles/Mainpage Styles/Homepage.css";
-import Testimonials from "./Testimonials";
 
 const Branding = lazy(() =>
   import("../../components/Mainpage Components/Branding")
@@ -19,6 +18,11 @@ const Services = lazy(() =>
   import("../../components/Mainpage Components/Services")
 );
 const About = lazy(() => import("../../components/Mainpage Components/About"));
+
+const Testimonials = lazy(() =>
+  import("../../components/Mainpage Components/Testimonials")
+);
+
 const StatsCounter = lazy(() =>
   import("../../components/Mainpage Components/StatsCounter")
 );
@@ -57,14 +61,14 @@ const Homepage = () => {
       </Suspense>
 
       <Suspense fallback={<LoadingFallback />}>
-        <motion.section
+        {/* <motion.section
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-        >
-          <Services />
-        </motion.section>
+        > */}
+        <Services />
+        {/* </motion.section> */}
       </Suspense>
 
       <Suspense fallback={<LoadingFallback />}>

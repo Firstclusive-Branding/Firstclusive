@@ -372,6 +372,7 @@ const ManageBlogs = () => {
               <button onClick={handleCreateOrUpdate}>
                 {editMode ? "Update" : "Create"}
               </button>
+              <button onClick={() => setShowModal(false)}>Cancel</button>
             </div>
           </div>
         </div>

@@ -1,8 +1,10 @@
 .job-apply-container {
-  background: url("../../assets/DotBg.png");
   min-height: 100vh;
   padding: 80px 20px;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 
 .job-apply-container h1 {
@@ -20,6 +22,26 @@
   border-radius: 8px;
 }
 
+.job-apply-back-link {
+  margin-bottom: 20px;
+  margin-top: -10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-apply-back-link:hover {
+  background-color: #afe507;
+  color: #0e0e0e;
+}
+
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -33,6 +55,7 @@
 }
 
 .form-group input[type="text"],
+.form-group input[type="number"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
 .form-group input[type="file"] {
@@ -95,6 +118,27 @@
 .my-swal-button:hover {
   background-color: #98c000;
   transform: scale(1.02);
+}
+
+.job-apply-spinner {
+  border: 3px solid #ffffff88;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {

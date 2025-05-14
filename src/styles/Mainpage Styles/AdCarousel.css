@@ -93,6 +93,7 @@
   box-sizing: border-box;
   transition: width 0.3s ease, opacity 0.3s ease;
   opacity: 0.7 !important;
+  cursor: url("../../assets//Cursors Assets/CursorPointer.cur"), pointer !important;
 }
 
 .swiper-pagination-bullet-active {

@@ -1,8 +1,10 @@
 .aboutUs-container {
   color: #ffffff;
   padding-bottom: 50px;
-  background: url("../../assets/DotBg.png");
   overflow: hidden;
+  background-image: url("../../assets/abstract-bg.png");
+  background-size: contain;
+  background-position: center;
 }
 
 .aboutUs-header {
