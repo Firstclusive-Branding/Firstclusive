@@ -160,9 +160,8 @@
   background: white;
   padding: 30px;
   border-radius: 10px;
-  width: 800px;
   max-width: 800px;
-
+  width: 800px;
   max-height: 80vh;
   overflow-y: auto;
   display: flex;
@@ -248,13 +247,15 @@
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 26px;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer !important;
   color: #333;
   transition: color 0.3s ease;
 }
-
+.modal-close-cross * {
+  cursor: pointer !important;
+}
 .modal-close-cross:hover {
   color: crimson;
 }

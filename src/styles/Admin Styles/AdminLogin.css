@@ -95,6 +95,25 @@
   background-color: #d0ff3f;
 }
 
+.admin-login-spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #0e0e0e;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .admin-login-links {
   margin-top: 16px;
   display: flex;

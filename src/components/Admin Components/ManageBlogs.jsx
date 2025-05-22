@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
 import { FaPlus, FaRightLong, FaLeftLong } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import { FaTimes } from "react-icons/fa";
 
 import { toast } from "react-toastify";
 
@@ -270,7 +271,7 @@ const ManageBlogs = () => {
               className="modal-close-cross"
               onClick={() => setShowModal(false)}
             >
-              &times;
+              <FaTimes />
             </span>
 
             <h2>{editMode ? "Edit Blog" : "Create Blog"}</h2>

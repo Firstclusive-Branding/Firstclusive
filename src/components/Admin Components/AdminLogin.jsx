@@ -11,10 +11,12 @@ const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch(`${baseURL}/api/auth/signin`, {
@@ -41,6 +43,8 @@ const AdminLogin = () => {
     } catch (error) {
       console.error("Login error:", error);
       toast.error("Something went wrong. Please check credentials or server.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,6 +55,7 @@ const AdminLogin = () => {
           <MdHome size={25} /> Home
         </Link>
       </button>
+
       <form onSubmit={handleLogin} className="admin-login-form">
         <h2 className="admin-login-title">Admin Login</h2>
 
@@ -80,8 +85,8 @@ const AdminLogin = () => {
           </span>
         </div>
 
-        <button type="submit" className="admin-login-button">
-          Sign In
+        <button type="submit" className="admin-login-button" disabled={loading}>
+          {loading ? <div className="admin-login-spinner"></div> : "Sign In"}
         </button>
 
         <div className="admin-login-links">

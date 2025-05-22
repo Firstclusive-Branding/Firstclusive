@@ -7,6 +7,9 @@ import "../../styles/Admin Styles/ManageSingleBlog.css";
 import Swal from "sweetalert2";
 import { IoCloseSharp } from "react-icons/io5";
 import { toast } from "react-toastify";
+import { FaArrowLeft } from "react-icons/fa";
+import { FiEdit3 } from "react-icons/fi";
+import { MdDelete } from "react-icons/md";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
@@ -106,16 +109,19 @@ const ManageSingleBlog = () => {
           className="single-blog-back-button"
           onClick={() => navigate("/admin/manage-blogs")}
         >
-          ← Back to Blogs
+          <FaArrowLeft />
+          Back to Blogs
         </button>
 
         <button
           className="single-blog-edit-btn"
           onClick={() => setShowModal(true)}
         >
+          <FiEdit3 />
           Edit Blog
         </button>
         <button className="single-blog-delete-btn" onClick={handleDelete}>
+          <MdDelete />
           Delete Blog
         </button>
       </div>

@@ -27,6 +27,7 @@ const ManageTeam = () => {
   const [teamData, setTeamData] = useState([]);
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [formSubmitting, setFormSubmitting] = useState(false);
 
   const fetchTeamMembers = async (search = "", page = currentPage) => {
     try {
@@ -107,6 +108,7 @@ const ManageTeam = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormSubmitting(true);
 
     Swal.fire({
       title: "Save Changes?",
@@ -120,7 +122,10 @@ const ManageTeam = () => {
       background: "#1e1e1e",
       color: "#fff",
     }).then(async (result) => {
-      if (!result.isConfirmed) return;
+      if (!result.isConfirmed) {
+        setFormSubmitting(false);
+        return;
+      }
 
       const payload = {
         firstName: formData.firstName,
@@ -154,6 +159,8 @@ const ManageTeam = () => {
         fetchTeamMembers();
       } catch (err) {
         toast.error("Error saving member.");
+      } finally {
+        setFormSubmitting(false);
       }
     });
   };
@@ -186,6 +193,23 @@ const ManageTeam = () => {
     setIsModalOpen(false);
   };
 
+  const getGoogleDriveImageURL = (url) => {
+    try {
+      if (!url.includes("drive.google.com")) return url;
+      let fileId = "";
+
+      if (url.includes("/file/d/")) {
+        fileId = url.split("/file/d/")[1]?.split("/")[0];
+      } else if (url.includes("id=")) {
+        fileId = url.split("id=")[1]?.split("&")[0];
+      }
+
+      return `https://drive.google.com/uc?export=view&id=${fileId}`;
+    } catch {
+      return url;
+    }
+  };
+
   return (
     <div className="manage-team-container">
       <div className="manage-team-header">
@@ -202,72 +226,91 @@ const ManageTeam = () => {
       </div>
 
       <div className="manage-team-table-wrapper">
-        <table className="manage-team-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Photo</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Role</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Description</th>
-              <th>Message</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {teamData.map((member, index) => (
-              <tr key={member._id}>
-                <td>{index + 1}</td>
-                <td>
-                  <img
-                    src={
-                      member.profileimg
-                        ? `${baseURL}/api/uploads/${member.profileimg}`
-                        : placeholderAvatar
-                    }
-                    alt={`${member.firstName} ${member.lastName}`}
-                    className="team-avatar"
-                  />
-                </td>
-                <td>{member.firstName}</td>
-                <td>{member.lastName}</td>
-                <td>{member.role}</td>
-                <td>
-                  <a href={`mailto:${member.email}`}>{member.email}</a>
-                </td>
-                <td>{member.mobile}</td>
-                <td>
-                  {member.description?.length > 100
-                    ? member.description.slice(0, 100) + "..."
-                    : member.description}
-                </td>
-                <td>
-                  {member.message?.length > 100
-                    ? member.message.slice(0, 100) + "..."
-                    : member.message}
-                </td>
-
-                <td className="manage-team-actions">
-                  <button
-                    className="icon-btn edit-btn"
-                    onClick={() => openModal(member)}
-                  >
-                    <FaEdit size={18} />
-                  </button>
-                  <button
-                    className="icon-btn delete-btn"
-                    onClick={() => handleDelete(member._id)}
-                  >
-                    <FaTrashAlt size={18} />
-                  </button>
-                </td>
+        {loading ? (
+          <div className="manager-team-loader-container">
+            <div className="manager-team-spinner"></div>
+          </div>
+        ) : (
+          <table className="manage-team-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Description</th>
+                <th>Message</th>
+                <th>Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {teamData.map((member, index) => (
+                <tr key={member._id}>
+                  <td>{index + 1}</td>
+
+                  <td>
+                    {/* <img
+                      src={
+                        member.profileimg
+                          ? member.profileimg.includes("drive.google.com")
+                            ? `https://drive.google.com/uc?export=view&id=${
+                                member.profileimg.split("/d/")[1]?.split("/")[0]
+                              }`
+                            : `${baseURL}/api/uploads/${member.profileimg}`
+                          : placeholderAvatar
+                      }
+                      alt={`${member.firstName} ${member.lastName}`}
+                      className="team-avatar"
+                    /> */}
+                    <img
+                      src={getGoogleDriveImageURL(
+                        member.profileimg || placeholderAvatar
+                      )}
+                      alt={`${member.firstName} ${member.lastName}`}
+                      className="team-avatar"
+                    />
+                  </td>
+
+                  <td>{member.firstName}</td>
+                  <td>{member.lastName}</td>
+                  <td>{member.role}</td>
+                  <td>
+                    <a href={`mailto:${member.email}`}>{member.email}</a>
+                  </td>
+                  <td>{member.mobile}</td>
+                  <td>
+                    {member.description?.length > 100
+                      ? member.description.slice(0, 100) + "..."
+                      : member.description}
+                  </td>
+                  <td>
+                    {member.message?.length > 100
+                      ? member.message.slice(0, 100) + "..."
+                      : member.message}
+                  </td>
+
+                  <td className="manage-team-actions">
+                    <button
+                      className="icon-btn edit-btn"
+                      onClick={() => openModal(member)}
+                    >
+                      <FaEdit size={18} />
+                    </button>
+                    <button
+                      className="icon-btn delete-btn"
+                      onClick={() => handleDelete(member._id)}
+                    >
+                      <FaTrashAlt size={18} />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
         <div className="manage-team-pagination">
           <button
             onClick={() => {
@@ -378,8 +421,16 @@ const ManageTeam = () => {
                   onChange={(e) => setImageFile(e.target.files[0])}
                 />
               </label>
-              <button type="submit" className="team-modal-submit">
-                Save
+              <button
+                type="submit"
+                className="team-modal-submit"
+                disabled={formSubmitting}
+              >
+                {formSubmitting ? (
+                  <div className="manage-team-spinner small-spinner"></div>
+                ) : (
+                  "Save"
+                )}
               </button>
             </form>
           </div>

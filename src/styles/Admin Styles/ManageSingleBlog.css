@@ -37,10 +37,7 @@
   align-items: center;
   gap: 2rem;
 }
-
-.single-blog-back-button,
-.single-blog-edit-btn,
-.single-blog-delete-btn {
+.single-blog-actions button {
   background-color: transparent;
   border: 1px solid #0e0e0e;
   color: #0e0e0e;
@@ -50,6 +47,13 @@
   cursor: pointer;
   margin-bottom: 20px;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.single-blog-actions button svg {
+  font-size: 1.2rem;
 }
 
 .single-blog-back-button:hover {
